@@ -1,0 +1,17 @@
+-
+	const isMainPage = currentPage === 'index.html'
+header.header(class=isMainPage && 'header--overlay')
+	a.logo._logo(href=isMainPage ? undefined : 'index.html' tabindex=isMainPage ? undefined : -1)
+		img._mascot(alt='Наш маскот' width=34 height=38 src='#')
+		img._type(alt=PROJECT_NAME width=101 height=19 src='#')
+
+	nav.nav._nav
+		- const label = 'Открыть меню'
+		button.burger._toggle(type='button' aria-label=label title=label hidden=true aria-expanded='false' aria-controls='navigation')
+			span._open 🍔
+			span._close ✖️
+		ul._list.page__no-list#navigation
+			each href, text in navigation
+				- const isCurrentPage = currentPage === href
+				li._item
+					a._link(href=href, aria-current=isCurrentPage ? 'page' : undefined)=text

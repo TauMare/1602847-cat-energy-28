@@ -1,0 +1,9 @@
+section.programs
+	h2.visually-hidden Наши программы
+
+	each program in programs
+		article.program
+			h3._title=program.title
+			img(src="#", alt="." aria-hidden="true")
+			p._subtitle=program.subtitle
+			a._link(href=`/catalog/${program.link}`)=`Каталог ${program.link}`
