@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подбор программы | Кэт энерджи</title>
+    <link rel="stylesheet" href="../css/style.css" attr>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body class="page__body">
+    <header class="header"><a class="logo header__logo" href="index.html" tabindex="-1"><img class="logo__mascot" alt="Наш маскот" width="34" height="38" src="#"><img class="logo__type" alt="Кэт энерджи" width="101" height="19" src="#"></a>
+      <nav class="nav header__nav">
+        <button class="burger nav__toggle" type="button" aria-label="Открыть меню" title="Открыть меню" hidden aria-expanded="false" aria-controls="navigation"><span class="burger__open">🍔</span><span class="burger__close">✖️</span></button>
+        <ul class="nav__list page__no-list" id="navigation">
+          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="nav__item"><a class="nav__link" href="form.html" aria-current="page">Подбор программы</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page__main">
+      <section class="form">
+        <h1 class="form__title">Подбор программы</h1>
+        <p class="form__subtitle">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
+        <form class="form__main" action="https://echo.htmlacademy.ru/courses" method="post">
+          <fieldset class="form__personal">
+            <legend class="visually-hidden">Введите данные о Вашем котике.</legend>
+            <div class="form__input-wrapper"> 
+              <label class="form__title" for="name">Имя:*</label>
+              <input class="form__input" type="text" name="name" placeholder="Барсик" id="name" required>
+            </div>
+            <div class="form__input-wrapper"> 
+              <label class="form__title" for="weight">Вес (кг):*</label>
+              <input class="form__input" type="number" name="weight" placeholder="7" id="weight" required>
+            </div>
+            <div class="form__input-wrapper"> 
+              <label class="form__title" for="age">Возраст (лет):</label>
+              <input class="form__input" type="number" name="age" placeholder="7" id="age" required>
+            </div>
+          </fieldset>
+          <fieldset class="form__goals">
+            <legend class="visually-hidden">Выберите цель для Вашего котика.</legend>
+            <div class="input-wrapper--radio">
+              <input class="input-wrapper--radio__radio" type="radio" name="loss" id="loss" value="loss" checked>
+              <label class="input-wrapper--radio__title" for="loss">Похудение</label>
+            </div>
+            <div class="input-wrapper--checkbox">
+              <input class="input-wrapper--checkbox__radio" type="radio" name="gain" id="gain" value="gain">
+              <label class="input-wrapper--checkbox__title" for="gain">Набор массы</label>
+            </div>
+            <div class="input-wrapper--checkbox">
+              <input class="input-wrapper--checkbox__radio" type="radio" name="none" id="none" value="none">
+              <label class="input-wrapper--checkbox__title" for="none">Не знаю (Нужен ваш совет)</label>
+            </div>
+          </fieldset>
+          <fieldset class="form__contacts"> 
+            <legend class="form__title">Контактные данные (владельца кота)</legend>
+            <div class="form__input-wrapper"> 
+              <label class="form__title" for="email">E-mail:*</label>
+              <input class="form__input" type="email" name="email" placeholder="кuklachev@gmail.com" id="email" required>
+            </div>
+            <div class="form__input-wrapper"> 
+              <label class="form__title" for="tel">Телефон:*</label>
+              <input class="form__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" id="tel" required>
+            </div>
+          </fieldset>
+          <div class="form__about">
+            <label class="form__title" for="comment">Комментарий</label>
+            <textarea class="form__input" name="comment" placeholder="Расскажите обо всех повадках кота" id="comment" cols="30" rows="10"> </textarea>
+          </div>
+          <fieldset class="form__additionals">
+            <legend>Дополнительно</legend>
+            <div class="input-wrapper--checkbox">
+              <input class="input-wrapper--checkbox__checkbox" type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked>
+              <label class="input-wrapper--checkbox__title" for="sweetener">сахарозаменитель</label>
+            </div>
+            <div class="input-wrapper--checkbox">
+              <input class="input-wrapper--checkbox__checkbox" type="checkbox" name="milk" id="milk" value="milk">
+              <label class="input-wrapper--checkbox__title" for="milk">молоко</label>
+            </div>
+            <div class="input-wrapper--checkbox">
+              <input class="input-wrapper--checkbox__checkbox" type="checkbox" name="water" id="water" value="water">
+              <label class="input-wrapper--checkbox__title" for="water">питьевая вода</label>
+            </div>
+            <div class="input-wrapper--checkbox">
+              <input class="input-wrapper--checkbox__checkbox" type="checkbox" name="vitamins" id="vitamins" value="vitamins">
+              <label class="input-wrapper--checkbox__title" for="vitamins">витамины</label>
+            </div>
+          </fieldset>
+          <button class="form__button--main" type="submit">отправить заявку</button>
+          <p class="form__required">* — Обязательные поля</p>
+        </form>
+      </section>
+    </main>
+    <div class="address">
+      <address class="address__wrapper"><strong class="address__title">Приглашаем к сотрудничеству дилеров!</strong><a href="geo:59.938731,30.323062">ул. Большая<br>Конюшенная, д. 19/8<span>Санкт-Петербург</span></a></address>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682254154821!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer class="footer"><img class="footer__logo" alt="Кэт энерджи" width="128" height="24" src="#">
+      <ul class="footer__socials" aria-label="Наши социальные сети">
+        <li><a class="footer__social" title="Мы ВКонтанте" aria-label="Мы ВКонтанте">
+            <svg width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true">
+              <rect width="28" height="22"></rect>
+            </svg></a></li>
+        <li><a class="footer__social" title="Наш Ютуб канал" aria-label="Наш Ютуб канал">
+            <svg width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true">
+              <rect width="28" height="22"></rect>
+            </svg></a></li>
+        <li><a class="footer__social" title="Наш Телеграм" aria-label="Наш Телеграм">
+            <svg width="28" height="22" viewBox="0 0 28 22" fill="currentColor" aria-hidden="true">
+              <rect width="28" height="22"></rect>
+            </svg></a></li>
+      </ul><a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+        <svg width="27" height="34" viewBox="0 0 27 34" fill="#666666" aria-hidden="true">
+          <rect width="27" height="34"></rect>
+        </svg></a>
+    </footer>
+  </body>
+</html>

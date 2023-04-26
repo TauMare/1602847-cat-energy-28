@@ -1,0 +1,41 @@
+- title: Cat Energy PRO
+  weight: 500
+  flavor: Курица
+  price: 700
+  imgSrc: #
+
+- title: Cat Energy PRO
+  weight: 1000
+  flavor: Курица
+  price: 1000
+  imgSrc: #
+
+- title: Cat Energy PRO
+  weight: 500
+  flavor: Рыба
+  price: 700
+  imgSrc: #
+
+- title: Cat Energy PRO
+  weight: 1000
+  flavor: Рыба
+  price: 1000
+  imgSrc: #
+
+- title: Cat Energy slim
+  weight: 500
+  flavor: Гречка
+  price: 400
+  imgSrc: #
+
+- title: Cat Energy slim
+  weight: 1000
+  flavor: Гречка
+  price: 700
+  imgSrc: #
+
+- title: Cat Energy slim
+  weight: 500
+  flavor: Рис
+  price: 500
+  imgSrc: #

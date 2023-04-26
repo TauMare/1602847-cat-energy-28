@@ -2,7 +2,61 @@ extends common/base
 
 block variables
 	-
-		title = `Форма отзыва | ${PROJECT_NAME}`
+		title = `Подбор программы | ${PROJECT_NAME}`
 		currentPage = 'form.html'
 
 block main
+	section.form
+		h1._title Подбор программы
+		p._subtitle Заполните анкету, и мы подберем <br> программу питания для вашего кота
+		form._main(action="https://echo.htmlacademy.ru/courses" method="post")
+			fieldset._personal
+				legend.visually-hidden Введите данные о Вашем котике.
+				._input-wrapper 
+					label._title(for="name") Имя:*
+					input._input(type="text" name="name" placeholder="Барсик" id="name" required)
+				._input-wrapper 
+					label._title(for="weight") Вес (кг):*
+					input._input(type="number" name="weight" placeholder="7" id="weight" required)
+				._input-wrapper 
+					label._title(for="age") Возраст (лет):
+					input._input(type="number" name="age" placeholder="7" id="age" required)
+			fieldset._goals
+				legend.visually-hidden Выберите цель для Вашего котика.
+				.input-wrapper--radio
+					input._radio(type="radio" name="loss" id="loss" value="loss" checked)
+					label._title(for="loss") Похудение
+				.input-wrapper--checkbox
+					input._radio(type="radio" name="gain" id="gain" value="gain")
+					label._title(for="gain") Набор массы
+				.input-wrapper--checkbox
+					input._radio(type="radio" name="none" id="none" value="none")
+					label._title(for="none") Не знаю (Нужен ваш совет)
+			fieldset._contacts 
+				legend._title Контактные данные (владельца кота)
+				._input-wrapper 
+					label._title(for="email") E-mail:*
+					input._input(type="email" name="email" placeholder="кuklachev@gmail.com" id="email" required)
+				._input-wrapper 
+					label._title(for="tel") Телефон:*
+					input._input(type="tel" name="tel" placeholder="8 (960) 900-60-90" id="tel" required)
+			._about
+				label._title(for="comment") Комментарий
+				textarea._input(name="comment" placeholder="Расскажите обо всех повадках кота" id="comment" cols="30" rows="10") 
+			fieldset._additionals
+				legend Дополнительно
+				.input-wrapper--checkbox
+					input._checkbox(type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked)
+					label._title(for="sweetener") сахарозаменитель
+				.input-wrapper--checkbox
+					input._checkbox(type="checkbox" name="milk" id="milk" value="milk")
+					label._title(for="milk") молоко
+				.input-wrapper--checkbox
+					input._checkbox(type="checkbox" name="water" id="water" value="water")
+					label._title(for="water") питьевая вода
+				.input-wrapper--checkbox
+					input._checkbox(type="checkbox" name="vitamins" id="vitamins" value="vitamins")
+					label._title(for="vitamins") витамины
+			button._button--main(type="submit") отправить заявку
+			p._required * — Обязательные поля
+				

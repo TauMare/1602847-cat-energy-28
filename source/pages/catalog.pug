@@ -2,7 +2,47 @@ extends common/base
 
 block variables
 	-
-		title = `Фото и видео | ${PROJECT_NAME}`
+		title = `Каталог продукции | ${PROJECT_NAME}`
 		currentPage = 'catalog.html'
 
 block main
+	section.catalog
+		h1._title Каталог продукции
+		ul._products(aria-label="Наша продукция.")
+			each product in products
+				li._product
+					img(src='#' width=68 height=86 alt=product.title+".")
+					h3._title=product.title + " " + product.weight + " г"
+					dl._properties
+						dt._title Масса
+						dd._subtitle=product.weight
+						dt._title Вкус
+						dd._subtitle=product.flavor
+						dt._title Цена
+						dd._subtitle=product.price + " ₽"
+					button._button--main заказать
+			li._product--additional
+				img(src="#", alt="Сюда мы добавим иконку.")
+				h3._title Показать еще 100500 товаров
+				p._subtitle На самом деле вкусов гораздо больше!
+				button._button--main--inactive показать все
+	section.catalog--additionals
+		h2._title Дополнительные товары
+		table.extra-goods(aria-label='Дополнительные товары', lang="ru")
+			thead.visually-hidden 
+				tr
+				- const TABLE_HEADLINES = ["Название", "Количество", "Цена", "Действие"]
+				each headline in TABLE_HEADLINES
+					th=headline
+			tbody
+				each additional in additionals
+					tr.extra-goods__item
+						td.extra-goods__name=additional.title
+						td=additional.amount
+						td=additional.price + ' '
+							abbr(title="Рублей") Р.
+						td.extra-goods__cta
+							button.button Заказать
+	section.promo
+		h2.visually-hidden Промо-блок
+		p.title Закажите все и получите чехол для кота в подарок!

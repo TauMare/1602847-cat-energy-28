@@ -1,25 +1,44 @@
 {
-  "name": "cat-energy-28",
-  "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
-  "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.0",
-    "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "^0.1.11"
-  },
-  "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint .",
-    "lint": "npm run editorconfig",
-    "build": "echo 'Build task'",
-    "start": "echo 'Start task'"
-  },
-  "editorconfig-cli": [
-    "*.json",
-    "source/*.html"
-  ],
-  "engines": {
-    "node": "^16"
-  },
-  "type": "module"
+	"name": "cat-energy-28",
+	"version": "1.0.0",
+	"description": "Демо проект в рамках менторства в HTML Academy",
+	"type": "module",
+	"scripts": {
+		"start": "gulp",
+		"build": "gulp build",
+		"cache:clear": "gulp clearCache"
+	},
+	"keywords": [],
+	"author": {
+		"name": "Arthur Baileys Li",
+		"url": "https://github.com/baileys-li"
+	},
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "^2.29.1",
+		"del": "^7.0.0",
+		"gulp": "^4.0.2",
+		"gulp-cache": "^1.1.3",
+		"gulp-esbuild": "^0.11.1",
+		"gulp-notify": "^4.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^9.0.1",
+		"gulp-pug": "^5.0.0",
+		"gulp-sass": "^5.1.0",
+		"gulp-sharp-responsive": "^0.4.0",
+		"postcss-calc": "^8.2.4",
+		"postcss-csso": "^6.0.1",
+		"postcss-preset-env": "^8.3.2",
+		"postcss-sort-media-queries": "^4.4.1",
+		"pug-bem": "^1.2.2",
+		"sass": "^1.62.0",
+		"supports-webp": "^3.0.0",
+		"yaml": "^2.2.1"
+	},
+	"volta": {
+		"node": "16.20.0"
+	},
+	"dependencies": {
+		"@fontsource/pt-sans": "^4.5.11"
+	}
 }
