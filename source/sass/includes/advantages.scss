@@ -1,0 +1,90 @@
+@use "variables";
+
+.advantages {
+	counter-set: feature;
+	text-align: center;
+
+	&__header {
+		margin: 0;
+		padding: 48px 20px 56px;
+	}
+
+	&__title {
+		margin: 0 auto 2em;
+		max-width: 580px;
+
+		display: block;
+	}
+
+	&__list {
+		background-color: hsl(0, 0%, 93%);
+	}
+
+	&__panorama {
+		background-color: variables.$accent;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		--text-l: 100%;
+	}
+
+	&__image {
+		order: 1;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__sublist {
+		background-color: variables.$main-light;
+
+		display: grid;
+		text-align: left;
+		padding: 22px 18px 46px;
+		gap: 25px;
+	}
+
+	&__full {
+		grid-column: 1 / -1;
+	}
+
+	@media (width < variables.$earlyBP) {
+		&__header {
+			padding-top: 32px;
+			padding-bottom: 35px;
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				height: 17px;
+				inset: auto 0 -16px;
+				background-color: var(--back-c);
+				clip-path: polygon(0 0, 50% 100%, 100% 0);
+			}
+		}
+
+		&__item + &__item {
+			border-top: 1px solid hsl(0, 0%, 84%);
+		}
+	}
+
+	@media (width >= variables.$earlyBP) {
+		&__title {
+			margin-bottom: 25px;
+		}
+
+		&__list, &__panorama, &__sublist {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		&__image {
+			grid-column-end: span 2;
+
+		}
+
+		&__full:nth-child(even) &__image {
+			order: 0;
+		}
+	}
+}

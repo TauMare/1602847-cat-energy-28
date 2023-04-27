@@ -1,0 +1,6 @@
+section.features
+	h2._title Как это работает
+	ol._list
+		each feature in features
+			li._feature=feature.text
+				+placeholderIcon({width: 60, className: 'features__icon', fill: "white"})

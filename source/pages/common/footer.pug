@@ -1,0 +1,11 @@
+footer.footer
+	img._logo(alt=PROJECT_NAME width=128 height=24 src="#")
+
+	ul._socials(aria-label="Наши социальные сети")
+		each social in socials
+			li
+				a._social(href=social.href title=social.text aria-label=social.text)
+					+placeholderIcon({width: 28, height: 22})
+
+	a(href="https://htmlacademy.ru/intensive/adaptive")._copyright HTML Academy
+		+placeholderIcon({width: 27, height: 34, fill: "#666666"})
