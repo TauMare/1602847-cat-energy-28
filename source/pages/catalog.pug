@@ -11,7 +11,7 @@ block main
 		ul._products(aria-label="Наша продукция.")
 			each product, index in products
 				li.product
-					//- +adaptivePic({className: 'intro__img', loading: undefined, alt: product.title, src: '../img/index-can', ext: 'png', sizes: product.sizes, picClass: 'intro__pic', medias: ['(min-width: 1000px)', '(min-width: 500px)'], suffixes: ['desk', 'tab'] })
+					+adaptivePic({className: 'product__img', loading: 'eager', alt: product.title, src: `../img/catalog/catalog-${index}`, ext: 'png', sizes: product.sizes, picClass: 'product__pic', medias: ['(min-width: 1000px)', '(min-width: 500px)'], suffixes: ['desk', 'tab'] })
 					h3._title=product.title + " " + product.weight + " г"
 					dl._properties
 						dt._title Масса
@@ -21,7 +21,6 @@ block main
 						dt._title Цена
 						dd._subtitle=product.price + " ₽"
 					button.button заказать 
-					//- button product__button
 			li.catalog__additional
 				img(src="#", alt="Сюда мы добавим иконку.")
 				h3._title Показать еще 100500 товаров

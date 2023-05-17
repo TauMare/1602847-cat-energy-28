@@ -20,7 +20,7 @@
   weight: 1000
   flavor: Рыба
   price: 1000
-  imgSrc: [[252, 300], [504, 600], [516, 588]]
+  sizes: [[252, 300], [504, 600], [516, 588]]
 
 - title: Cat Energy slim
   weight: 500
