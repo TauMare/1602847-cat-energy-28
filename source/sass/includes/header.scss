@@ -1,13 +1,16 @@
-@use "mixins";
-@use "variables";
+.nav__list {
+    list-style-type: none;
+    padding: 0;
+};
 
-$logo-width: 185px;
+.nav__link {
+    font: {
+        weight: 500;
+        size: 20px;
+    }
 
-.header {
-	&__logo {
-		position: absolute;
-		top: 0;
-		left: calc(50% - $logo-width / 2);
-		z-index: 5;
-	}
-}
+    line-height: 1;
+    text-decoration: none;
+    color: hsl(0deg 0% 0%);
+    text-transform: uppercase;
+};

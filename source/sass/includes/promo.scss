@@ -1,0 +1,7 @@
+@use "./variables.scss" as *;
+
+.promo__title {
+        font-family: $font-additional;
+        line-height: 20px;
+        color: #000000; // заменить на белый
+}

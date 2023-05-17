@@ -1,16 +1,16 @@
 
 import gulp from 'gulp'
 import gulpEsbuild from 'gulp-esbuild'
-import { isDev } from './mode.mjs'
+import { isProd, isDev } from './mode.mjs'
 
 export function compileScripts() {
 	return gulp.src('source/typescript/*.ts')
 			.pipe(gulpEsbuild({
 					bundle: true,
 					target: 'es2015',
-					sourcemap: 'external',
+					sourcemap: isDev() && 'external',
 					format: 'esm',
-					minify: isDev()
+					minify: isProd()
 			}))
 			.pipe(gulp.dest('build/js'))
 }

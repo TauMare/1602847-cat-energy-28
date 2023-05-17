@@ -1,8 +1,23 @@
-// @use "common/global";
+@use "common/global";
 
-// // Bloks
+// Bloсks
+@use "includes/page";
+@use "includes/button";
 
-// // Common
+@use "includes/header.scss";
+@use "includes/intro.scss";
+@use "includes/address.scss";
+@use "includes/addtitionals.scss";
+@use "includes/catalog.scss";
+@use "includes/features.scss";
+@use "includes/form.scss";
+@use "includes/programs.scss";
+@use "includes/promo.scss";
+@use "includes/showcase.scss";
+@use "includes/footer.scss";
+
+
+// Common
 // @use "includes/page";
 // @use "includes/header";
 // @use "includes/main-nav";
@@ -16,7 +31,7 @@
 // @use "includes/copyright";
 
 
-// // First section
+// First section
 // @use "includes/hero";
 // @use "includes/review";
 // @use "includes/advantages";

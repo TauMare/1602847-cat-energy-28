@@ -2,40 +2,40 @@
   weight: 500
   flavor: Курица
   price: 700
-  imgSrc: #
+  sizes: [[204, 258], [483, 516], [483, 516]]
 
 - title: Cat Energy PRO
   weight: 1000
   flavor: Курица
   price: 1000
-  imgSrc: #
+  sizes: [[252, 300], [504, 618], [516, 588]]
 
 - title: Cat Energy PRO
   weight: 500
   flavor: Рыба
   price: 700
-  imgSrc: #
+  sizes: [[204, 234], [489, 522], [489, 522]]
 
 - title: Cat Energy PRO
   weight: 1000
   flavor: Рыба
   price: 1000
-  imgSrc: #
+  imgSrc: [[252, 300], [504, 600], [516, 588]]
 
 - title: Cat Energy slim
   weight: 500
   flavor: Гречка
   price: 400
-  imgSrc: #
+  sizes: [[204, 234], [483, 513], [483, 513]]
 
 - title: Cat Energy slim
   weight: 1000
   flavor: Гречка
   price: 700
-  imgSrc: #
+  sizes: [[252, 300], [504, 600], [516, 588]]
 
 - title: Cat Energy slim
   weight: 500
   flavor: Рис
   price: 500
-  imgSrc: #
+  sizes: [[216, 252], [489, 522], [489, 522]]
