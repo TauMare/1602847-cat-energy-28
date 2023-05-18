@@ -1,10 +1,5 @@
 lockfileVersion: '6.0'
 
-dependencies:
-  '@fontsource/pt-sans':
-    specifier: ^4.5.11
-    version: 4.5.11
-
 devDependencies:
   browser-sync:
     specifier: ^2.29.1
@@ -656,10 +651,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /@fontsource/pt-sans@4.5.11:
-    resolution: {integrity: sha512-w0Z11/B8PYcgM67fTSgZ9poFNJ8AdnglKlcH0aMdU7bBNfiHuKvZOxwUsynWpgghToh3GS4H2TizNnmi1wSEYg==}
-    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
