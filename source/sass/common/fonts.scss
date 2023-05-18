@@ -11,5 +11,7 @@ $weights: 400, 700;
 }
 
 @each $weight in $weights {
-	@include connect-font("PT Sans", "../fonts/pt-sans-cyrillic-#{$weight}-normal.woff2", $weight);
+	@include connect-font("Oswald", "../fonts/oswald-#{$weight}.woff2", $weight);
 }
+
+@include connect-font("Lato", "../fonts/lato-regular.woff2", 400);

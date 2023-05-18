@@ -1,5 +1,6 @@
 @use "./fonts";
-@use "./variables.scss";
+@use "./variables.scss" as *;
+
 *,
 *::before,
 *::after {
@@ -11,7 +12,3 @@ img {
 	object-fit: contain;
 }
 
-
-:focus {
-	outline: auto 2px variables.$accent;
-}

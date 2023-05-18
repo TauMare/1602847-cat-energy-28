@@ -1,0 +1,18 @@
+@use "./variables.scss" as *;
+
+.features__list {
+    padding: 0;
+};
+
+.features__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+};
+
+.features__feature {
+    font-family: $font-additional;
+    line-height: 18px;
+    list-style-type: none;
+    color: $light-black;
+};

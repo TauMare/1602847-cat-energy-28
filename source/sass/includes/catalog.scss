@@ -1,0 +1,25 @@
+@use "./variables.scss" as *;
+
+.catalog__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.product__title {
+    font-weight: 400;
+};
+
+.product__properties {
+    font-family: $font-additional;
+    font-size: 12px;
+    line-height: 16px;
+    color: $light-black;
+};
+
+.product__button--main {
+    font-family: $font-main;
+    font-size: 16px;
+    text-transform: uppercase;
+};
+

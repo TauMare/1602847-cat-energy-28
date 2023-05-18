@@ -1,25 +1,39 @@
-@use "mixins";
-@use "variables";
+@use "./variables.scss" as *;
 
 .button {
-	font: {
-		family: inherit;
-		weight: 700;
-		size: 21px;
-	}
-	line-height: 1.24;
-	text: {
-		transform: uppercase;
-		decoration: none;
-	}
+    font-family: $font-main;
+    text-transform: uppercase;
+    text-decoration: none; // for anchor tags
+    color: #fff;
 
-	outline-offset: 0.2em;
-	border: none;
-	padding: 16px;
+    background-color: $accent; 
+    border: none; // for button tags
+    cursor: pointer; // for button tags
 
-	@include mixins.button-colors();
+    display: inline-flex;
 
-	&:disabled {
-		background-color: hsl(0, 0%, 90%);
-	}
+    &:is(:hover, :focus-visible) {
+
+    }
+
+    &:active {
+
+    }
+
+    &--secondary {
+        background-color: #dedede;
+        color: #000;
+
+        &:is(:hover, :focus-visible) {
+
+        }
+    
+        &:active {
+    
+        }
+    }
 }
+
+// button button--secondary
+
+

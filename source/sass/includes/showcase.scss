@@ -1,0 +1,31 @@
+@use "./variables.scss" as *;
+
+.showcase__title {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+.showcase__subtitle {
+    font-family: $font-additional;
+    line-height: 18px;
+    color: $light-black;    
+}
+
+.showcase__summary dt, .showcase__summary dd {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.key-card__key {
+    font-family: $font-additional;
+    font-size: 12px;
+    line-height: 12px;
+    color: $light-black;    
+}
+
+.key-card__value {
+    font-size: 24px;
+    line-height: 24px;  
+}

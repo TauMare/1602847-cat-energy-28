@@ -1,6 +1,0 @@
-@use "variables";
-@use "mixins";
-
-.link {
-	@include mixins.link-styles
-}

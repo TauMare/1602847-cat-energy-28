@@ -9,9 +9,9 @@ block main
 	section.form
 		h1._title Подбор программы
 		p._subtitle Заполните анкету, и мы подберем <br> программу питания для вашего кота
-		form._main(action="https://echo.htmlacademy.ru/courses" method="post")
+		form.main(action="https://echo.htmlacademy.ru/courses" method="post")
 			fieldset._personal
-				legend.visually-hidden Введите данные о Вашем котике.
+				legend.page__hidden Введите данные о Вашем котике.
 				._input-wrapper 
 					label._title(for="name") Имя:*
 					input._input(type="text" name="name" placeholder="Барсик" id="name" required)
@@ -21,8 +21,8 @@ block main
 				._input-wrapper 
 					label._title(for="age") Возраст (лет):
 					input._input(type="number" name="age" placeholder="7" id="age" required)
-			fieldset._goals
-				legend.visually-hidden Выберите цель для Вашего котика.
+			fieldset.goals
+				legend.page__hidden Выберите цель для Вашего котика.
 
 				label._choose.-radio
 					input._input.-radio(type="radio" name="goal" id="loss" value="loss" checked)
@@ -33,18 +33,18 @@ block main
 				label._choose.-radio
 					input._input.-radio(type="radio" name="goal" id="none" value="none")
 					span._label Не знаю (Нужен ваш совет)
-			fieldset._contacts 
-				legend._title Контактные данные (владельца кота)
+			fieldset.contacts 
+				legend._form-title Контактные данные (владельца кота)
 				._input-wrapper 
 					label._title(for="email") E-mail:*
 					input._input(type="email" name="email" placeholder="кuklachev@gmail.com" id="email" required)
 				._input-wrapper 
 					label._title(for="tel") Телефон:*
 					input._input(type="tel" name="tel" placeholder="8 (960) 900-60-90" id="tel" required)
-			._about
+			.about
 				label._title(for="comment") Комментарий
 				textarea._input(name="comment" placeholder="Расскажите обо всех повадках кота" id="comment" cols="30" rows="10") 
-			fieldset._additionals
+			fieldset.additionals
 				legend._title Дополнительно
 				label._choose.-checkbox
 					input._input.-checkbox(type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked)
@@ -58,6 +58,6 @@ block main
 				label._choose.-checkbox
 					input._input.-checkbox(type="checkbox" name="vitamins" id="vitamins" value="vitamins")
 					span._label витамины
-			button._button--main(type="submit") отправить заявку
+			button.button(type="submit") отправить заявку
 			p._required * — Обязательные поля
 				
