@@ -1,7 +1,16 @@
 @use "./variables.scss" as *;
 
+.programs {
+    display: flex;
+    flex-direction: column;
+}
+
 .program {
+    margin-inline: var(--side-offset);
+    margin-block: 10px;
     background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column
 };
 
 .program__title {
@@ -12,6 +21,8 @@
 };
 
 .program__subtitle {
+    margin: 0;
+    padding-left: 20px;
     font: {
         family: $font-additional;
         size: 14px;
@@ -22,9 +33,64 @@
     color: $light-black;
 };
 
+.program__title-wrapper {
+    padding-left: 23px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .program__link {
+    margin-block: 42px 11px;
+    margin-left: 19px;
     line-height: 16px;
     text-decoration: none;
     color: #000000;
     text-transform: uppercase;
+
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: 0;
+        width: 240px;
+        height: 1px;
+        border: 1px solid #E6E6E6;
+    }
 };
+
+.program__icon--stay {
+    margin-right: 20px;
+    width: 50px;
+    height: 53px;
+};
+
+.program__icon--walk {
+    margin-right: 11px;
+    width: 67px;
+    height: 50px;
+}
+
+@media (width >= $tablet-width) {
+    .program__icon--stay {
+        width: 200px; 
+        height: 211px;
+    }
+    .program__icon--walk {
+        width: 268px;
+        height: 200px;
+    }
+}
+
+@media (width >= $desktop-width) {
+    .program__icon--stay {
+        width: 100px; 
+        height: 106px;
+    }
+    .program__icon--walk {
+        width: 134px;
+        height: 100px;
+    }
+}

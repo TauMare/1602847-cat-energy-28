@@ -1,8 +1,67 @@
 @use "./variables.scss" as *;
 
+.footer {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    padding-inline: var(--side-offset);
+    background-color: $white;
+}
+
+.footer__logo {
+    margin: auto;
+};
+
+.footer__socials {
+    display: flex;
+    list-style-type: none;
+    gap: 26px;
+    padding-left: 0;
+    justify-content: center;
+
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: calc(50% - 140px);
+        width: 280px;
+        height: 0px;
+        border: 1px solid #D9D9D9;
+    }
+};
+
 .footer__link {
     font-family: $font-additional;
     text-decoration: none;
     line-height: 19px;
     color: $light-black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: calc(50% - 140px);
+        width: 280px;
+        height: 0px;
+        border: 1px solid #D9D9D9;
+    }
 }
+
+.footer__social {
+    color: inherit;
+    transition: color 0.1s ease-in-out;
+
+    &:is(:hover, :focus-visible) {
+        color: $accent;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+

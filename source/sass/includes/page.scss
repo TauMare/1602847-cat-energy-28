@@ -1,6 +1,7 @@
 @use "variables" as *;
 
 .page {
+    --side-offset: 20px;
 	font: {
 		family: $font-main;
 		weight: 400;
@@ -9,6 +10,18 @@
 
 	line-height: calc(24 / 16);
 	color: #000000;
+
+    @media (width >= $tablet-width) {
+        --side-offset: 30px;
+    }
+    
+    @media (width >= $desktop-width) {
+        --side-offset: calc(50% - #{$container-width} / 2);
+    }
+}
+
+.page__body {
+    margin: 0;
 }
 
 .page__title {

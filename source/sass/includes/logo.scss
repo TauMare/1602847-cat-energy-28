@@ -1,0 +1,52 @@
+@use "variables" as *;
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__type {
+    margin-left: 57px;
+};
+
+
+.logo__icon {
+    display: none;
+
+    &--small {
+        display: block;
+    }
+}
+
+@media (width >= $tablet-width) {
+    .logo__mascot {
+        width: 61px; 
+        height: 51px;
+    }
+    .logo__icon {
+        &--small {
+            display: none;
+        }
+
+        &--medium {
+            display: block;
+        }
+    }
+}
+
+@media (width >= $desktop-width) {
+    
+    .logo__mascot {
+        width: 71px; 
+        height: 60px;
+    }
+
+    .logo__icon {
+        &--medium {
+            display: none;
+        };
+        &--full {
+            display: block;
+        }
+    }
+}

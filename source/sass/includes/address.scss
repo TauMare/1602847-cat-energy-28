@@ -1,17 +1,29 @@
 @use "./variables.scss" as *;
 
-.address__title, .address__link {
+.address__title {
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
     line-height: 20px;
-    text-decoration: none;
     text-transform: uppercase;
     color: #111111;
+    width: 130px;
 }
 
 .address__link {
     font-family: $font-additional;
     font-size: 14px;
     color: $light-black;
+    text-transform: none;
+    line-height: 20px;
+    font-style: normal;
+    text-decoration: none;
 }
+
+.address__wrapper {
+    margin-inline: var(--side-offset);
+    margin-block: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+};

@@ -1,7 +1,7 @@
 {
 	"name": "cat-energy-28",
 	"version": "1.0.0",
-	"description": "Демо проект в рамках менторства в HTML Academy",
+	"description": "Демо проект в рамках обучения в HTML Academy",
 	"type": "module",
 	"scripts": {
 		"build": "gulp build",
@@ -9,7 +9,7 @@
 		"editorconfig": "npx editorconfig-cli",
 		"fix:scss": "stylelint \"source/sass/**/*.scss\" --fix",
 		"lint": "gulp lint && pnpm lint:scss",
-		"lint:scss": "stylelint \"source/sass/**/*.scss\"",
+		"stylelint": "stylelint \"source/sass/**/*.scss\"",
 		"start": "gulp"
 	},
 	"keywords": [],

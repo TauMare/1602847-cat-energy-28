@@ -2,6 +2,8 @@
 
 .features__list {
     padding: 0;
+    display: grid;
+    grid-row-gap: 20px;
 };
 
 .features__title {
@@ -10,9 +12,36 @@
     line-height: 40px;
 };
 
-.features__feature {
+.features__text {
     font-family: $font-additional;
     line-height: 18px;
     list-style-type: none;
     color: $light-black;
+    margin: 0;
+};
+
+
+.features {
+    margin-inline: var(--side-offset);
+};
+
+.features__feature {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-column-gap: 20px; 
+    align-items: center
+};
+
+.features__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: $accent;
+    grid-column: 1/2;
+};
+
+.feature__icon {
+    color: $white;
 };

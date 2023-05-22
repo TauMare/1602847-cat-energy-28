@@ -1,30 +1,112 @@
 @use "variables" as *;
+@use "mixins" as *;
+
+$mob-bg-h: 302px;
 
 .intro {
     background-color: $accent;
-	background-image: linear-gradient(180deg,$accent 302px,#fff 0);
+    background-image: linear-gradient(180deg, $accent $mob-bg-h, #ffffff 0);
     isolation: isolate;
     position: relative;
     color: #ffffff;
     text-align: center;
-};
+
+    padding-inline: var(--side-offset);
+    padding-block: 27px 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        width: 100%;
+        height: $mob-bg-h;
+        background-image: url("../images/intro-bg.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 0.2;
+        z-index: -1;
+        @include adaptive-bg('../img/index-background', "png");
+    }
+}
+
+;
 
 .intro__title {
     font-weight: 400;
     font-size: 36px;
     line-height: 1;
-};
+    margin-block: 0 25px;
+}
+
+;
 
 .intro__subtitle {
     font-size: 14px;
     line-height: 1;
     text-transform: uppercase;
-};
+    margin-block: 0 29px;
+}
+
+;
 
 .intro__button {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff; // изменить на @white 
-};
+    color: $white;
+}
+
+;
+
+
+@media (width >=$tablet-width) {
+    .intro {
+        background: none;
+        color: inherit;
+        text-align: left;
+        padding-inline: calc(var(--side-offset) + 88px);
+        padding-block-end: 526px;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .intro__pic {
+        position: absolute;
+        bottom: 0;
+        right: var(--side-offset);
+        z-index: -1;
+    }
+}
+
+@media (width >=$desktop-width) {
+
+    .intro {
+        padding-inline: calc(var(--side-offset) + 80px);
+        background-image: linear-gradient(to right, #ffffff 50%, $accent 50%);
+        padding-block: 100px;
+        display: grid;
+        align-items: center;
+        align-content: center;
+        justify-items: start;
+        min-height: 600px;
+
+        &::before {
+            width: 50%;
+            right: 0;
+            left: auto;
+            height: 100%;
+            top: 0;
+            display: block;
+        }
+    }
+
+    .intro__pic {
+    	right: calc(50% - 320px);
+	    top: calc(50% - 210px);
+        z-index: -1;
+    }
+}

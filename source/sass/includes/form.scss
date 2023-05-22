@@ -1,5 +1,60 @@
 @use "./variables.scss" as *;
 
+
+@mixin underline {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: -30px;
+        width: 118%;
+        height: 0px;
+        border: 1px solid #EBEBEB;
+    }
+}
+
+@mixin inputIcon($color: "000000") {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(100% - 35px);
+    color: $color;
+}
+
+@mixin title($width) {
+    font-size: 24px;
+    line-height: 26px;
+    padding: 0;
+
+    margin-bottom: 35px;
+
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 16px;
+        left: calc(100% + 14px);
+        width: $width;
+        height: 0px;
+        border: 2px solid #68B738;
+    }
+}
+
+@mixin input($pt, $pr, $pb, $pl) {
+    &:is(:hover) {
+        border: 1px solid #CDCDCD;
+    }
+
+    &:is(:focus, :focus-visible) {
+        padding: calc($pt - 1px) calc($pr - 1px) calc($pb - 1px) calc($pl - 1px);
+        border: 2px solid $light-black;
+    }
+
+    &--error {
+        border: 2px solid #FF8282;
+    }
+}
+
 .form__title {
     font-weight: 400;
     font-size: 36px;
@@ -20,6 +75,11 @@
     color: $light-black;
 };
 
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
 .main__label {
     line-height: 18px;
     text-transform: uppercase;
@@ -30,6 +90,12 @@
     font-size: 20px;
     text-transform: uppercase;
     line-height: 30px;
+
+    padding-left: 20px;
+
+    .goals__input--radio:disabled ~ & {
+        opacity: 0.3;
+    }
 };
 
 .contacts__form-title, .additionals__title, .about__title {
@@ -43,3 +109,262 @@
     line-height: 30px;
     text-transform: uppercase;
 }
+
+.form {
+    padding-inline: var(--side-offset);
+}
+
+.main__personal {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    @include underline();
+}
+
+.main__input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    &:last-child{
+        margin-bottom: 24px;
+    }
+}
+
+.main__title {
+    padding-right: 13px;
+    font-size: 16px;
+    // выставить возраст(лет) по макету
+}
+
+.main__input {
+    font-size: 16px;
+    height: 45px;
+    display: block;
+    padding: 14px 20px 14px 20px;
+
+    outline: none;
+    border: 1px solid #E7E7E7;
+
+    @include input(14px, 20px, 14px, 20px);
+
+    flex-grow: 1;
+}
+
+.goals {
+    border: none;
+    margin-top: 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    padding-bottom: 19px;
+    @include underline();
+}
+
+.goals__choose {
+    margin-bottom: 13px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.contacts {
+    margin-top: 26px;
+    margin-bottom: 24px;
+    padding: 0;
+
+    border: none;
+}
+
+.contacts__form-title {
+    font-size: 24px;
+    line-height: 26px;
+    padding: 0;
+
+    margin-bottom: 35px;
+
+    @include title(99px);
+}
+
+.contacts__input-wrapper {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 14px;
+
+    &:last-child {
+        margin-bottom: 0;
+    };
+
+    position: relative;
+}
+
+.contacts__title {
+    padding-right: 10px;
+    font-size: 16px;
+}
+
+.contacts__input {
+    font-size: 16px;
+    height: 45px;
+    display: block;
+    padding: 14px 40px 14px 15px;
+
+    flex-grow: 1;
+
+    outline: none;
+    border: 1px solid #E7E7E7;
+
+    @include input(14px, 40px, 14px, 15px);
+}
+
+.contacts__icon--email {
+    @include inputIcon();
+    .contacts__input:is(:focus, :focus-visible) + &{
+        color: $accent;
+    };
+
+    .contacts__input--error + &{
+        color: $error;
+    }
+}
+
+.contacts__icon--phone {
+    @include inputIcon();
+    .contacts__input:is(:focus, :focus-visible) + &{
+        color: $accent;
+    };
+
+    .contacts__input--error + &{
+        color: $error;
+    };
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 23px;
+}
+
+.about__title {
+    width: 121px;
+    @include title(158px);
+}
+
+.about__input {
+    resize: none;
+    outline: none;
+    border: 1px solid #E7E7E7;
+
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 18px;
+
+    padding: 10px 15px 0px 12px;
+
+    color: #000000;
+
+    &::placeholder {
+        color: $light-black;
+    }
+}
+
+.additionals {
+    border: none;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 34px;
+}
+
+.additionals__title {
+    @include title(136px);
+}
+
+.additionals__choose {
+    margin-bottom: 13px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.additionals__label {
+    padding-left: 16px;
+}
+
+.main__button {
+    width: 100%;
+}
+
+.main__required {
+    display: block;
+    margin-inline: auto;
+    font-family: $font-additional;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.goals__input--radio {
+    display: none;
+}
+
+.goals__choose--radio {
+    display: flex;
+    align-items: center;
+}
+
+.goals__radio {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #CDCDCD;
+    border-radius: 50%;
+    position: relative;
+
+    .goals__input--radio:checked + &{
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 9px);
+            left: calc(50% - 9px);
+            width: 18px;
+            height: 18px;
+            background-color: $accent;
+            border-radius: 50%;
+        }
+    }
+
+    .goals__input--radio:is(:hover, :focus, :focus-visible) + &{
+        border: 1px solid #BABABA;
+    }
+
+    .goals__input--radio:disabled + &, .goals__input--radio--disabled + &{
+        opacity: 0.3;
+    }
+
+    .goals__input--radio:disabled:checked + &, .goals__input--radio--disabled:checked + &{
+        opacity: 0.3;
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 9px);
+            left: calc(50% - 9px);
+            width: 18px;
+            height: 18px;
+            background-color: $accent;
+            border-radius: 50%;
+        }
+    }
+}
+

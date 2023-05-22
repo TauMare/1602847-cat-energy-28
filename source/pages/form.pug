@@ -26,38 +26,57 @@ block main
 
 				label._choose.-radio
 					input._input.-radio(type="radio" name="goal" id="loss" value="loss" checked)
+					span._radio
 					span._label Похудение
 				label._choose.-radio
 					input._input.-radio(type="radio" name="goal" id="gain" value="gain")
+					span._radio
 					span._label Набор массы
 				label._choose.-radio
-					input._input.-radio(type="radio" name="goal" id="none" value="none")
+					input._input.-radio(type="radio" name="goal" id="none" value="none" disabled checked)
+					span._radio
 					span._label Не знаю (Нужен ваш совет)
 			fieldset.contacts 
-				legend._form-title Контактные данные (владельца кота)
+				legend._form-title Контактные данные<br> (владельца кота)
 				._input-wrapper 
 					label._title(for="email") E-mail:*
 					input._input(type="email" name="email" placeholder="кuklachev@gmail.com" id="email" required)
+					svg._icon--email(width=20 height=20 aria-hidden="true" fill="currentColor")
+						use(href=`img/form.svg#mail`)
 				._input-wrapper 
 					label._title(for="tel") Телефон:*
 					input._input(type="tel" name="tel" placeholder="8 (960) 900-60-90" id="tel" required)
+					svg._icon--phone(width=20 height=20 aria-hidden="true" fill="currentColor")
+						use(href=`img/form.svg#phone`)
 			.about
 				label._title(for="comment") Комментарий
-				textarea._input(name="comment" placeholder="Расскажите обо всех повадках кота" id="comment" cols="30" rows="10") 
+				textarea._input(name="comment" placeholder="Расскажите обо всех повадках кота." id="comment" cols="30" rows="10")
 			fieldset.additionals
 				legend._title Дополнительно
 				label._choose.-checkbox
 					input._input.-checkbox(type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked)
+					span._checkbox 
+						svg._checkbox-icon(width=26 height=26 aria-hidden="true" fill="currentColor")
+						use(href=`img/form.svg#tick`)
 					span._label сахарозаменитель
 				label._choose.-checkbox
 					input._input.-checkbox(type="checkbox" name="milk" id="milk" value="milk")
+					span._checkbox 
+						svg._checkbox-icon(width=26 height=26 aria-hidden="true" fill="currentColor")
+						use(href=`img/form.svg#tick`)
 					span._label молоко
 				label._choose.-checkbox
 					input._input.-checkbox(type="checkbox" name="water" id="water" value="water")
+					span._checkbox 
+						svg._checkbox-icon(width=26 height=26 aria-hidden="true" fill="currentColor")
+						use(href=`img/form.svg#tick`)
 					span._label питьевая вода
 				label._choose.-checkbox
 					input._input.-checkbox(type="checkbox" name="vitamins" id="vitamins" value="vitamins")
+					span._checkbox 
+						svg._checkbox-icon(width=26 height=26 aria-hidden="true" fill="currentColor")
+						use(href=`img/form.svg#tick`)
 					span._label витамины
-			button.button(type="submit") отправить заявку
+			button._button.button(type="submit") отправить заявку
 			p._required * — Обязательные поля
 				
