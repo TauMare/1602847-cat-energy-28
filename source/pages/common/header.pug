@@ -16,7 +16,7 @@ header.header(class=isMainPage && 'header--overlay')
 
 	nav._nav
 		- const label = 'Открыть меню'
-		button.burger._toggle(hidden)
+		button.burger._toggle(hidden aria-label=label title=label aria-expanded="false" )
 			svg(width=65 height=65 viewBox="0 0 65 65" fill="none" stroke="currentColor" stroke-width=1.5 role="img" )
 				each line, index in ['top', 'middle', 'bottom']
 					- const yCoord = 23.25 + 8 * index

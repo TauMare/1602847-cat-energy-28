@@ -25,7 +25,6 @@
 .header__toggle {
     background: none;
     border: none;
-
     margin: 0;
     margin-left: auto;
     padding: 0;
@@ -44,18 +43,16 @@
     line-height: 1;
     text-decoration: none;
     text-transform: uppercase;
-
     display: block;
     text-align: center;
-
     transition: opacity 0.3s ease-in;
 
     &:is(:hover, :focus-visible) {
-        opacity: 60%;
+        opacity: 0.6;
     }
 
     &:active {
-        opacity: 30%;
+        opacity: 0.3;
     }
 }
 
@@ -89,7 +86,6 @@
     }
 
     .header__link {
-    
         padding-block: 22px;
         border-top: 1px solid hsl(0deg 0% 90%);
     
@@ -103,9 +99,11 @@
         border: none;
         align-items: start;        
     }
+
     .header__toggle {
         display: none;
     };
+
     .header__list {
         display: flex;
         gap: 32px;
@@ -125,6 +123,7 @@
 @media (width >=$desktop-width) {
     .header {
         padding-block: 54px 0;
+
         &--overlay {
             position: absolute;
             top: 0;

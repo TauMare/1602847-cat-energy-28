@@ -22,7 +22,7 @@ function toggleNav() {
 	const isWillBeOpen = isNavClosed();
 
 	toggle!.setAttribute('aria-expanded', String(isWillBeOpen));
-	toggle!.title = `${isWillBeOpen ? 'Close' : 'Open'} navigation`;
+	toggle!.title = `${isWillBeOpen ? 'Закрыть' : 'Открыть'} меню'`;
 	toggle!.setAttribute('aria-label', toggle!.title);
 	list!.inert = !isWillBeOpen;
 }

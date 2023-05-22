@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    color: inherit;
 }
 
 .logo__type {
@@ -43,7 +44,6 @@
 
     .logo__type {
         position: static;
-
         margin-top: 6px;
     };
 }
