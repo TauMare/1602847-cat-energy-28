@@ -7,18 +7,14 @@
         grid-template-rows: 50% 50%;
         align-items: center;
         justify-items: center;
-
-
         margin-top: 54px;
         margin-inline: var(--side-offset);
         height: 280px;
-
         background-color: $accent;
-        position: relative;
         isolation: isolate;
         position: relative;
-
         opacity: 1;
+
         &::before {
             content: "";
             position: absolute;
@@ -30,8 +26,11 @@
             background-size: cover;
             opacity: 0.15;
             z-index: -1;
+
             @include adaptive-bg('../img/gift', "png");
         }
+
+        margin-bottom: 35px;
 }
 
 .promo__title {

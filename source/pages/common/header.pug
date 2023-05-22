@@ -12,18 +12,17 @@ header.header(class=isMainPage && 'header--overlay')
 		svg(role="img" aria-labelledby="logotype-title" width=102 height=19 fill="currentColor")._type
 			title#logotype-title=PROJECT_NAME
 			use(href="img/logotype.svg#type" )
-	button._burger-button
-		svg(role="img" aria-labelledby="header-burger" width=24 height=16 fill="currentColor")._type
-			title#header-burger Открыть меню.
-			use(href="img/logotype.svg#burger" )
+	
 
 	nav._nav
 		- const label = 'Открыть меню'
-		button.burger._toggle(type='button' aria-label=label title=label hidden=true aria-expanded='false' aria-controls='navigation')
-			span._open 🍔
-			span._close ✖️
+		button.burger._toggle(hidden)
+			svg(width=65 height=65 viewBox="0 0 65 65" fill="none" stroke="currentColor" stroke-width=1.5 role="img" )
+				each line, index in ['top', 'middle', 'bottom']
+					- const yCoord = 23.25 + 8 * index
+					line(class=`burger__line burger__line--${line}` x1=20 x2=44 y1=yCoord y2=yCoord)
 		ul._list.page__no-list#navigation
 			each href, text in navigation
 				- const isCurrentPage = currentPage === href
-				li._item
-					a._link(href=href, aria-current=isCurrentPage ? 'page' : undefined)=text
+				li
+					a._link(href=href, aria-current=isCurrentPage && 'page')=text

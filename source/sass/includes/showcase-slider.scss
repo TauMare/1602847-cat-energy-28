@@ -1,0 +1,46 @@
+.showcase__slider {
+    position: relative;
+    height: 280px;
+}
+
+.showcase__before-img {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+  }
+
+.showcase__after-img {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
+  }
+
+  .showcase__button {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 25px);
+    border: none;
+    background:none;
+    background-image: url('../img/intro.svg#slider');
+    width: 50px;
+    height: 50px;
+    z-index: 0;
+
+    &::before {
+        position: absolute;
+        top: -100px;
+        left: 46%;
+        content: "";
+        width: 4px;
+        height: 256px;
+        background-color: #666666;
+        border-radius: 2px;
+        z-index: -1;
+
+        // подправить наложение
+    }
+  }

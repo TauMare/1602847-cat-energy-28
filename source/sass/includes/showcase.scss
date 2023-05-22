@@ -3,6 +3,7 @@
 .showcase {
     padding-inline: var(--side-offset);
     background-color: #EAEAEA;
+    padding-top: 25px;
 };
 
 .showcase__title {
@@ -15,7 +16,6 @@
     font-family: $font-additional;
     line-height: 18px;
     color: $light-black;    
-
     margin: 0;
     margin-block: 40px 20px;
 }
@@ -30,15 +30,14 @@
 .showcase__info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 24px;
+    grid-gap: 24px 10px;
 };
 
 .key-card {
     border: 1px solid #cdcdcd;
     border-radius: 3px;
     position: relative;
-    padding: 15px 16px 15px 16px;
+    padding: 15px 16px;
     text-align: center;
 }
 

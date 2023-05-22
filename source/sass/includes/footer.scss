@@ -2,14 +2,26 @@
 
 .footer {
     display: grid;
-    grid-template-rows: 1fr;
     grid-template-rows: repeat(3, 1fr);
     padding-inline: var(--side-offset);
     background-color: $white;
+    padding-block: 40px;
 }
 
 .footer__logo {
+    text-decoration: none;
     margin: auto;
+    color: $light-black;
+}
+
+.footer__logo-icon {
+    &:is(:hover, :focus, :focus-visible) {
+        color: #3E3E3E;
+    };
+
+    &:is(:active) {
+        color: #6B6B6B;
+    }
 };
 
 .footer__socials {
@@ -18,15 +30,15 @@
     gap: 26px;
     padding-left: 0;
     justify-content: center;
-
     position: relative;
+
     &::before {
         content: "";
         position: absolute;
         top: -20px;
         left: calc(50% - 140px);
         width: 280px;
-        height: 0px;
+        height: 0;
         border: 1px solid #D9D9D9;
     }
 };
@@ -39,18 +51,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     position: relative;
+
     &::before {
         content: "";
         position: absolute;
         top: 0;
         left: calc(50% - 140px);
         width: 280px;
-        height: 0px;
+        height: 0;
         border: 1px solid #D9D9D9;
     }
+
+    &:is(:hover, :focus-visible) .footer__icon--academy{
+        color: $accent;
+    }
+
+    &:active .footer__icon--academy{
+        color: $accent;
+        opacity: 0.3;
+    }
+
+    &:active {
+        color: #4444444D;
+    }
 }
+
+
 
 .footer__social {
     color: inherit;
@@ -61,7 +88,9 @@
     }
 
     &:active {
+        color: $accent;
         opacity: 0.3;
     }
 }
+
 

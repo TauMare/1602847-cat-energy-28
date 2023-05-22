@@ -16,6 +16,7 @@ $tablet-offset: 30px;
 $container-width: 1220px;
 $desktop-width: 1220px + $tablet-offset * 2;
 
-$font-main: "Oswald", sans-serif;
-$font-additional: "Lato", sans-serif;
+$font-additional: "Lato", 'Arial', sans-serif;
+$font-main: "Oswald", $font-additional;
+
 

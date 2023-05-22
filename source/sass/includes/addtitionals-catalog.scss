@@ -1,6 +1,6 @@
 @use "./variables.scss" as *;
 
-.additionals {
+.additionals-catalog {
     margin-inline: var(--side-offset);
 }
 
@@ -31,21 +31,21 @@
 
 .extra-good__item {
     margin-top: 30px;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     // grid-template-rows: repeat(3, 1fr);
     grid-template-rows: 16px 42px 40px;
     align-items: center;
-
     position: relative;
+
     &::before {
         content: "";
         position: absolute;
         top: -13px;
         left: 0;
         width: 100%;
-        height: 0px;
+        height: 0;
         border: 1px solid #CDCDCD;
     }
 
@@ -56,7 +56,7 @@
             top: calc(100% + 13px);
             left: 0;
             width: 100%;
-            height: 0px;
+            height: 0;
             border: 1px solid #CDCDCD;
         }
     }
@@ -78,27 +78,19 @@
     width: 100%;
 }
 
-.additionals__choose--checkbox {
-    display: flex;
-}
+.additionals-catalog__title {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    position: relative;
 
-.additionals__input--checkbox {
-    display: none;
-}
-
-.additionals__checkbox {
-    display: block;
-    width: 26px;
-    height: 26px;
-    color: red;
-}
-
-.additionals__checkbox-icon {
-    // background-color: #222222;
-    display: block;
-    width: 26px;
-    height: 26px;
-    color: red;
-    background-image: url("img/form.svg#tick");
-    // доделать состояния, разобраться с иконкой
+    &::before {
+        content: "";
+        position: absolute;
+        top: 16px;
+        left: calc(83% + 14px);
+        width: 53px;
+        height: 0;
+        border: 2px solid #68B738;
+    }
 }

@@ -1,5 +1,6 @@
 footer.footer
-	svg(role="img" aria-labelledby="footer-logo" width=128 height=24 fill="currentColor")._logo
+	a._logo(href="/index.html")
+		svg(role="img" aria-labelledby="footer-logo" width=128 height=24 fill="currentColor")._logo-icon
 			title#footer-logo=footer-logo
 			use(href="img/logotype.svg#type" )
 
@@ -10,6 +11,6 @@ footer.footer
 					svg(width=28 height=22 aria-hidden="true" fill="currentColor")
 						use(href=`img/stack.svg#${social.icon}`)
 
-	a._link(href="https://htmlacademy.ru/intensive/adaptive")._copyright HTML Academy
-		svg(width=28 height=34 aria-hidden="true" fill="currentColor")
+	a._link(href="https://htmlacademy.ru/intensive/adaptive") HTML Academy
+		svg._icon--academy(width=28 height=34 aria-hidden="true" fill="currentColor")
 						use(href=`img/stack.svg#academy`)

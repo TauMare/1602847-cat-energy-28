@@ -9,32 +9,34 @@
     border: none; // for button tags
     cursor: pointer; // for button tags
     display: inline-flex;
-    padding-block: 7px;
-    padding-inline: 44px;
+    padding-block: 14px;
+    padding-inline: 26px;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    &:is(:hover, :focus-visible) {
 
+    &:is(:hover, :focus-visible) {
+        color: #FFFFFF;
     }
 
     &:active {
-
+        color: #FFFFFF4D;
     }
 
     &--secondary {
         background-color: #dedede;
-        color: #000000;
+        color: $light-black;
+        font-size: 16px;
 
         &:is(:hover, :focus-visible) {
-
+            color: $light-black;
+            background-color: #EBEBEB;
         }
     
         &:active {
-    
+            color: #4444444D;
         }
     }
 }
-
-// button button--secondary
 
 

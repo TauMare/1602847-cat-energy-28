@@ -3,10 +3,13 @@
 .logo {
     display: flex;
     align-items: center;
+    gap: 12px;
 }
 
 .logo__type {
-    margin-left: 57px;
+    position: absolute;
+    left: calc(50% - 102px / 2);
+    top: 24px;
 };
 
 
@@ -19,10 +22,15 @@
 }
 
 @media (width >= $tablet-width) {
+    .logo  {
+        gap: 14px;
+    }
+
     .logo__mascot {
         width: 61px; 
         height: 51px;
     }
+
     .logo__icon {
         &--small {
             display: none;
@@ -32,10 +40,15 @@
             display: block;
         }
     }
+
+    .logo__type {
+        position: static;
+
+        margin-top: 6px;
+    };
 }
 
 @media (width >= $desktop-width) {
-    
     .logo__mascot {
         width: 71px; 
         height: 60px;
@@ -45,6 +58,7 @@
         &--medium {
             display: none;
         };
+
         &--full {
             display: block;
         }

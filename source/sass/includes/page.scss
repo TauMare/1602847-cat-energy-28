@@ -2,6 +2,7 @@
 
 .page {
     --side-offset: 20px;
+    --accent: #{$accent};
 	font: {
 		family: $font-main;
 		weight: 400;

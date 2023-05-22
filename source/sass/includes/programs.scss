@@ -7,7 +7,7 @@
 
 .program {
     margin-inline: var(--side-offset);
-    margin-block: 10px;
+    margin-top: 20px;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column
@@ -48,8 +48,8 @@
     text-decoration: none;
     color: #000000;
     text-transform: uppercase;
-
     position: relative;
+
     &::before {
         content: "";
         position: absolute;
@@ -73,11 +73,18 @@
     height: 50px;
 }
 
+.program__icon--arrow {
+    margin-left: 15px;
+}
+
+//уточнить по реализации состояний 
+
 @media (width >= $tablet-width) {
     .program__icon--stay {
         width: 200px; 
         height: 211px;
     }
+
     .program__icon--walk {
         width: 268px;
         height: 200px;
@@ -89,6 +96,7 @@
         width: 100px; 
         height: 106px;
     }
+
     .program__icon--walk {
         width: 134px;
         height: 100px;

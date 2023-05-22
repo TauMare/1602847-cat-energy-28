@@ -10,7 +10,6 @@ $mob-bg-h: 302px;
     position: relative;
     color: #ffffff;
     text-align: center;
-
     padding-inline: var(--side-offset);
     padding-block: 27px 0;
 
@@ -26,6 +25,7 @@ $mob-bg-h: 302px;
         background-size: cover;
         opacity: 0.2;
         z-index: -1;
+
         @include adaptive-bg('../img/index-background', "png");
     }
 }
@@ -83,7 +83,6 @@ $mob-bg-h: 302px;
 }
 
 @media (width >=$desktop-width) {
-
     .intro {
         padding-inline: calc(var(--side-offset) + 80px);
         background-image: linear-gradient(to right, #ffffff 50%, $accent 50%);

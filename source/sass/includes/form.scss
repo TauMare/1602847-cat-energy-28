@@ -3,13 +3,14 @@
 
 @mixin underline {
     position: relative;
+
     &::before {
         content: "";
         position: absolute;
         top: 100%;
         left: -30px;
         width: 118%;
-        height: 0px;
+        height: 0;
         border: 1px solid #EBEBEB;
     }
 }
@@ -25,17 +26,16 @@
     font-size: 24px;
     line-height: 26px;
     padding: 0;
-
     margin-bottom: 35px;
-
     position: relative;
+
     &::before {
         content: "";
         position: absolute;
         top: 16px;
         left: calc(100% + 14px);
         width: $width;
-        height: 0px;
+        height: 0;
         border: 2px solid #68B738;
     }
 }
@@ -51,6 +51,7 @@
     }
 
     &--error {
+        padding: calc($pt - 1px) calc($pr - 1px) calc($pb - 1px) calc($pl - 1px);
         border: 2px solid #FF8282;
     }
 }
@@ -90,7 +91,6 @@
     font-size: 20px;
     text-transform: uppercase;
     line-height: 30px;
-
     padding-left: 20px;
 
     .goals__input--radio:disabled ~ & {
@@ -118,17 +118,17 @@
     border: none;
     margin: 0;
     padding: 0;
-
     display: flex;
     flex-direction: column;
 
-    @include underline();
+    @include underline;
 }
 
 .main__input-wrapper {
     display: flex;
     align-items: center;
     margin-bottom: 14px;
+
     &:last-child{
         margin-bottom: 24px;
     }
@@ -137,6 +137,7 @@
 .main__title {
     padding-right: 13px;
     font-size: 16px;
+
     // выставить возраст(лет) по макету
 }
 
@@ -144,8 +145,7 @@
     font-size: 16px;
     height: 45px;
     display: block;
-    padding: 14px 20px 14px 20px;
-
+    padding: 14px 20px;
     outline: none;
     border: 1px solid #E7E7E7;
 
@@ -157,13 +157,12 @@
 .goals {
     border: none;
     margin-top: 22px;
-
     display: flex;
     flex-direction: column;
-
     padding: 0;
     padding-bottom: 19px;
-    @include underline();
+
+    @include underline;
 }
 
 .goals__choose {
@@ -178,7 +177,6 @@
     margin-top: 26px;
     margin-bottom: 24px;
     padding: 0;
-
     border: none;
 }
 
@@ -186,16 +184,14 @@
     font-size: 24px;
     line-height: 26px;
     padding: 0;
-
     margin-bottom: 35px;
 
-    @include title(99px);
+    @include title(103px);
 }
 
 .contacts__input-wrapper {
     display: flex;
     align-items: center;
-
     margin-bottom: 14px;
 
     &:last-child {
@@ -215,9 +211,7 @@
     height: 45px;
     display: block;
     padding: 14px 40px 14px 15px;
-
     flex-grow: 1;
-
     outline: none;
     border: 1px solid #E7E7E7;
 
@@ -225,7 +219,8 @@
 }
 
 .contacts__icon--email {
-    @include inputIcon();
+    @include inputIcon;
+
     .contacts__input:is(:focus, :focus-visible) + &{
         color: $accent;
     };
@@ -236,7 +231,8 @@
 }
 
 .contacts__icon--phone {
-    @include inputIcon();
+    @include inputIcon;
+
     .contacts__input:is(:focus, :focus-visible) + &{
         color: $accent;
     };
@@ -249,27 +245,26 @@
 .about {
     display: flex;
     flex-direction: column;
-
     margin-bottom: 23px;
 }
 
 .about__title {
     width: 121px;
-    @include title(158px);
+
+    @include title(165px);
 }
 
 .about__input {
     resize: none;
     outline: none;
     border: 1px solid #E7E7E7;
-
     font-family: $font-main;
     font-size: 16px;
     line-height: 18px;
-
-    padding: 10px 15px 0px 12px;
-
+    padding: 10px 15px 0 12px;
     color: #000000;
+
+    @include input(10px, 14px, 2px, 12px);
 
     &::placeholder {
         color: $light-black;
@@ -278,22 +273,20 @@
 
 .additionals {
     border: none;
-
     padding: 0;
     margin: 0;
-
     display: flex;
     flex-direction: column;
-
     margin-bottom: 34px;
 }
 
 .additionals__title {
-    @include title(136px);
+    @include title(145px); //120
 }
 
 .additionals__choose {
     margin-bottom: 13px;
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -301,6 +294,10 @@
 
 .additionals__label {
     padding-left: 16px;
+
+    .additionals__input--checkbox:disabled ~ &, .additionals__input--checkbox--disabled ~ & {
+        opacity: 0.3;
+    }
 }
 
 .main__button {
@@ -309,10 +306,12 @@
 
 .main__required {
     display: block;
-    margin-inline: auto;
     font-family: $font-additional;
     font-size: 14px;
     line-height: 16px;
+    margin: 0;
+    margin-inline: auto;
+    margin-block: 21px 36px;
 }
 
 .goals__input--radio {
@@ -355,6 +354,7 @@
 
     .goals__input--radio:disabled:checked + &, .goals__input--radio--disabled:checked + &{
         opacity: 0.3;
+
         &::before {
             content: "";
             position: absolute;
@@ -368,3 +368,71 @@
     }
 }
 
+.additionals {
+    // margin-inline: var(--side-offset);
+}
+
+.catalog__additional-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-inline: auto;
+}
+
+.catalog__additional-subtitle {
+    color: $light-black;
+    font-family: $font-additional;
+    font-size: 12px;
+    line-height: 16px;
+    margin-inline: auto;
+}
+
+.catalog__additional {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog__additional-icon {
+    margin-inline: auto;
+}
+
+
+
+.additionals__choose--checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.additionals__input--checkbox {
+    display: none;
+}
+
+.additionals__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #CDCDCD;
+
+    .additionals__input--checkbox:is(:hover, :focus, :focus-visible) + &{
+        border: 1px solid #BABABA;
+    }
+
+    .additionals__input--checkbox:disabled + &, .additionals__input--checkbox--disabled + &{
+        opacity: 0.3;
+    }
+}
+
+.additionals__checkbox-icon {
+    display: none;
+
+    .additionals__input--checkbox:checked + .additionals__checkbox &{
+        display: block;
+        color: $accent;
+    }
+
+    .additionals__input--checkbox:disabled + .additionals__checkbox &, .additionals__input--checkbox--disabled + .additionals__checkbox &{
+        opacity: 0.3;
+    }
+}

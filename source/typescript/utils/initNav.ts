@@ -1,19 +1,32 @@
-const BASE_CLASS = "main-nav",
-			navigation = document.querySelector(`.${BASE_CLASS}`),
-			toggle = navigation?.querySelector<HTMLButtonElement>(`.${BASE_CLASS}__toggle`),
-			list = navigation?.querySelector<HTMLUListElement>(`.${BASE_CLASS}__list`);
+const enum Info {
+	Block = 'header',
+	Media = '(min-width: 700px)'
+}
 
-if (navigation && toggle && list) {
+const header = document.querySelector(`.${Info.Block}`),
+	toggle = header?.querySelector<HTMLButtonElement>(`.${Info.Block}__toggle`),
+	list = header?.querySelector<HTMLUListElement>(`.${Info.Block}__list`);
+
+const mediaQuery = window.matchMedia(Info.Media);
+
+const isNavClosed = () => toggle!.getAttribute('aria-expanded') === 'false';
+
+if (header && toggle && list) {
 	toggle.hidden = false;
-	navigation.classList.add(`${BASE_CLASS}--enabled`);
+	header.classList.add(`${Info.Block}--js`);
 
 	toggle.addEventListener("click", toggleNav);
 }
 
 function toggleNav() {
-	const isWillBeOpen = toggle!.getAttribute('aria-expanded') === 'false';
+	const isWillBeOpen = isNavClosed();
 
 	toggle!.setAttribute('aria-expanded', String(isWillBeOpen));
-	toggle!.ariaLabel = toggle!.title = `${isWillBeOpen ? 'Закрыть' : 'Открыть'} меню`;
+	toggle!.title = `${isWillBeOpen ? 'Close' : 'Open'} navigation`;
+	toggle!.setAttribute('aria-label', toggle!.title);
 	list!.inert = !isWillBeOpen;
+}
+
+function correctNavInert() {
+	list!.inert = !mediaQuery.matches && isNavClosed();
 }
