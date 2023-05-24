@@ -11,38 +11,41 @@ block main
 		ul._products(aria-label="Наша продукция.")
 			each product, index in products
 				li.product
-					+adaptivePic({className: 'product__img', loading: 'eager', alt: product.title, src: `../img/catalog/catalog-${index}`, ext: 'png', sizes: product.sizes, picClass: 'product__pic', medias: ['(min-width: 1000px)', '(min-width: 500px)'], suffixes: ['desk', 'tab'] })
+					+adaptivePic({className: 'product__img', loading: 'eager', alt: product.title, src: `../img/catalog/catalog-${index}`, ext: 'png', sizes: product.sizes, picClass: 'product__pic', medias: ['(min-width: 1220px)', '(min-width: 707px)'], suffixes: ['desk', 'tab'] })
 					h3._title=product.title + " " + product.weight + " г"
-					dl._properties
+					dl.properties
 						dt._title Масса
-						dd._subtitle=product.weight
+						dd._subtitle #{product.weight} г
 						dt._title Вкус
 						dd._subtitle=product.flavor
 						dt._title Цена
-						dd._subtitle=product.price + " ₽"
-					button.button заказать 
+						dd._subtitle #{product.price} ₽
+					button._button.button заказать 
 			li.catalog__additional
-				img(src="#", alt="Сюда мы добавим иконку.")
-				h3._title Показать еще 100500 товаров
-				p._subtitle На самом деле вкусов гораздо больше!
-				button.button.-secondary._button--main--inactive показать все
-	section.additionals
-		h2._title Дополнительные товары
-		table.extra-good
-			thead.page__hidden
-				tr
-				- const TABLE_HEADLINES = ["Название", "Количество", "Цена", "Действие"]
-				each headline in TABLE_HEADLINES
-					th=headline
-			tbody
-				each additional in additionals
-					tr.extra-good__item
-						td.extra-good__name=additional.title
-						td.extra-good__amount=additional.amount
-						td.extra-good__price=additional.price + ' '
-							abbr(title="Рублей") Р
-						td.extra-good__cta
-							button.button.extra-good__button Заказать
-	section.promo
-		h2.page__hidden Промо-блок
-		p.title Закажите все и получите чехол для кота в подарок!
+				svg.catalog__additional-icon(width=30 height=30 aria-hidden="true" fill="currentColor")
+						use(href=`img/catalog.svg#plus`)
+				h3.catalog__additional-title Показать еще 100500 товаров
+				p.catalog__additional-subtitle На самом деле вкусов гораздо больше!
+				button.catalog__additional-button.button.button--secondary показать все
+	section.line-section.additionals-catalog
+		h2._title.-static.page__subtitle.additionals-catalog__title Дополнительные товары
+		._wrapper.additionals-catalog-wrapper
+			table.extra-good
+				thead.page__hidden
+					tr
+					- const TABLE_HEADLINES = ["Название", "Количество", "Цена", "Действие"]
+					each headline in TABLE_HEADLINES
+						th=headline
+				tbody._table
+					each additional in additionals
+						tr.extra-good__item
+							td.extra-good__name=additional.title
+							td.extra-good__amount=additional.amount
+							td.extra-good__price=additional.price + ' '
+								abbr(title="Рублей") Р
+							td.extra-good__cta
+								button.button.extra-good__button Заказать
+			aside.promo
+				svg._icon(width=80 height=80 aria-hidden="true" fill="currentColor")
+								use(href=`img/catalog.svg#present`)
+				p._title Закажите все <br>и получите чехол для кота в подарок!

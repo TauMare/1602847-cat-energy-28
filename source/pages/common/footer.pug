@@ -1,11 +1,15 @@
 footer.footer
-	img._logo(alt=PROJECT_NAME width=128 height=24 src="#")
+	svg(role="img" aria-labelledby="footer-logo" width=128 height=24 fill="currentColor")._logo
+		title#footer-logo=PROJECT_NAME
+		use(href="img/logotype.svg#type" )
 
-	ul._socials(aria-label="Наши социальные сети")
+	ul._socials.page__no-list(aria-label="Наши социальные сети")
 		each social in socials
 			li
-				a._social(href=social.href title=social.text aria-label=social.text)
-					+placeholderIcon({width: 28, height: 22})
+				a._social(href=social.link title=social.text aria-label=social.text)
+					svg(width=28 height=22 aria-hidden="true" fill="currentColor")
+						use(href=`img/stack.svg#${social.icon}`)
 
-	a._link(href="https://htmlacademy.ru/intensive/adaptive")._copyright HTML Academy
-		+placeholderIcon({width: 27, height: 34, fill: "#666666"})
+	a._copy(href="https://htmlacademy.ru/intensive/adaptive") HTML Academy
+		svg._copy-logo(width=28 height=34 aria-hidden="true" fill="currentColor")
+						use(href=`img/stack.svg#academy`)

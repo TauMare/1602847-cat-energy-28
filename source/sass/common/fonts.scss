@@ -1,4 +1,4 @@
-$weights: 400, 700;
+$weights: 400, 500, 700;
 
 @mixin connect-font($family, $file,  $weight: 400) {
 	@font-face {

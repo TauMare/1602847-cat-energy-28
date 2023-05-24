@@ -1,0 +1,135 @@
+@use "./variables.scss" as *;
+
+.additionals-catalog {
+    margin-block: 20px 0;
+    padding-top: 50px;
+
+    // margin-inline: var(--side-offset);
+}
+
+.extra-good {
+    width: 100%;
+}
+
+.extra-good__name {
+    line-height: 16px;
+    color: #222222;
+    text-transform: uppercase;
+}
+
+.extra-good__amount, .extra-good__price {
+    font-family: $font-additional;
+    font-size: 14px;
+    line-height: 14px;
+    color: $light-black;
+}
+
+.extra-good abbr {
+    text-decoration: none;
+}
+
+.extra-good__cta__button {
+    line-height: 20px;
+}
+
+.extra-good__item {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 16px 42px 40px;
+    align-items: center;
+    position: relative;
+};
+
+.extra-good__name {
+    grid-column: 1/3;
+}
+
+.extra-good__cta {
+    grid-column: 1/3; 
+}
+
+.extra-good__price {
+    margin-left: auto;
+}
+
+.extra-good__button {
+    width: 100%;
+}
+
+@media (width >= $tablet-width) {
+    .extra-good {
+        border: 1px solid #CDCDCD;
+    }
+
+    .extra-good__item {
+        margin: 0;
+        padding-block: 28px;
+        padding-inline: 38px;
+        border-bottom: 1px solid #CDCDCD;
+        display: flex;
+        flex-wrap: wrap;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    .extra-good__name {
+        font-size: 20px;
+        line-height: 20px;
+        padding-bottom: 25px;
+    }
+
+    .extra-good__amount {
+        font-size: 16px;
+        line-height: 20px;
+        padding-bottom: 25px;
+        margin-left: auto;
+    }
+
+    .extra-good__price {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+        padding-bottom: 25px;
+        margin-left: 50px;
+    }
+
+    .extra-good__cta {
+        width: 100%;
+    }
+
+
+    .extra-good__button {
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (width >=$desktop-width) { 
+    .additionals-catalog-wrapper {
+        display: flex;
+    }
+
+    .extra-good {
+        border: none;
+    }
+
+    .extra-good__cta {
+        max-width: 244px;
+    }
+
+    .extra-good__name {
+        padding-bottom: 0;
+    }
+
+    .extra-good__amount {
+        padding-bottom: 0;
+        margin-left: auto;
+    }
+
+    .extra-good__price {
+        padding-bottom: 0;
+    }
+}

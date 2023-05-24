@@ -1,14 +1,14 @@
-$accent: hsl(97, 53%, 47%);
+$accent: hsl(97deg 53% 47%);
 $light-black: #444444;
-// $main-light: hsl(0deg 0% 100%);
+$white: #F2F2F2;
+$extra-white: #FFFFFF;
+$error: #FF8282;
 
-// $page-bg: hsl(0deg 0% 95%);
+$tablet-width: 700px;
+$tablet-offset: 30px;
+$container-width: 1220px;
+$desktop-width: 1220px + $tablet-offset * 2;
+$font-additional: "Lato", 'Arial', sans-serif;
+$font-main: "Oswald", $font-additional;
 
-// $earlyBP: 34rem;
-// $bpTablet: 42rem;
-// $bp🖥️: 85rem;
-
-
-$font-main: "Oswald", sans-serif;
-$font-additional: "Lato", sans-serif;
 

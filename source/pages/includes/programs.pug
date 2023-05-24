@@ -3,7 +3,12 @@ section.programs
 
 	each program in programs
 		article.program
-			h3._title=program.title
-			img(src="#", alt="." aria-hidden="true")
+			._title-wrapper 
+				h3._title=program.title
+				svg(class=`program__icon--${program.icon}` width=50 height=53 aria-hidden="true" fill="currentColor")
+						use(href=`img/goals.svg#${program.icon}`)
 			p._subtitle=program.subtitle
+			
 			a._link(href=`/catalog/${program.link}`)=`Каталог ${program.link}`
+				svg(class=`program__icon--arrow` width=24 height=12 aria-hidden="true" fill="currentColor")
+						use(href=`img/intro.svg#arrow`)

@@ -1,17 +1,28 @@
 -
 	const isMainPage = currentPage === 'index.html'
 header.header(class=isMainPage && 'header--overlay')
-	a.logo._logo(href=isMainPage ? undefined : 'index.html' tabindex=isMainPage ? undefined : -1)
-		img._mascot(alt='Наш маскот' width=34 height=38 src='#')
-		img._type(alt=PROJECT_NAME width=101 height=19 src='#')
+	a.logo._logo(href=!isMainPage && 'index.html' tabindex=!isMainPage && -1)
+		svg._mascot(role="img" aria-labelledby="mascot-title" width=34 height=38)
+			title#mascot-title Наш маскот.
+			use._icon.-small(href="img/logotype.svg#small")
+			use._icon.-medium(href="img/logotype.svg#medium")
+			use._icon.-full(href="img/logotype.svg#full")
 
-	nav.nav._nav
+
+		svg(role="img" aria-labelledby="logotype-title" width=102 height=19 fill="currentColor")._type
+			title#logotype-title=PROJECT_NAME
+			use(href="img/logotype.svg#type" )
+	
+
+	nav._nav
 		- const label = 'Открыть меню'
-		button.burger._toggle(type='button' aria-label=label title=label hidden=true aria-expanded='false' aria-controls='navigation')
-			span._open 🍔
-			span._close ✖️
+		button.burger._toggle(hidden aria-label=label title=label aria-expanded="false" )
+			svg(width=65 height=65 viewBox="0 0 65 65" fill="none" stroke="currentColor" stroke-width=1.5 role="img" )
+				each line, index in ['top', 'middle', 'bottom']
+					- const yCoord = 23.25 + 8 * index
+					line(class=`burger__line burger__line--${line}` x1=20 x2=44 y1=yCoord y2=yCoord)
 		ul._list.page__no-list#navigation
 			each href, text in navigation
 				- const isCurrentPage = currentPage === href
-				li._item
-					a._link(href=href, aria-current=isCurrentPage ? 'page' : undefined)=text
+				li
+					a._link(href=href, aria-current=isCurrentPage && 'page')=text
