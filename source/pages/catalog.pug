@@ -15,7 +15,7 @@ block main
 					h3._title=product.title + " " + product.weight + " г"
 					dl.properties
 						dt._title Масса
-						dd._subtitle=product.weight
+						dd._subtitle #{product.weight} г
 						dt._title Вкус
 						dd._subtitle=product.flavor
 						dt._title Цена
@@ -26,26 +26,26 @@ block main
 						use(href=`img/catalog.svg#plus`)
 				h3.catalog__additional-title Показать еще 100500 товаров
 				p.catalog__additional-subtitle На самом деле вкусов гораздо больше!
-				button.button.-secondary показать все
-	section.additionals-catalog
-		h2._title Дополнительные товары
-		table.extra-good
-			thead.page__hidden
-				tr
-				- const TABLE_HEADLINES = ["Название", "Количество", "Цена", "Действие"]
-				each headline in TABLE_HEADLINES
-					th=headline
-			tbody._table
-				each additional in additionals
-					tr.extra-good__item
-						td.extra-good__name=additional.title
-						td.extra-good__amount=additional.amount
-						td.extra-good__price=additional.price + ' '
-							abbr(title="Рублей") Р
-						td.extra-good__cta
-							button.button.extra-good__button Заказать
-	section.promo
-		h2.page__hidden Промо-блок
-		svg._icon(width=80 height=80 aria-hidden="true" fill="currentColor")
-						use(href=`img/catalog.svg#present`)
-		p._title Закажите все <br>и получите чехол для кота в подарок!
+				button.catalog__additional-button.button.button--secondary показать все
+	section.line-section.additionals-catalog
+		h2._title.-static.page__subtitle.additionals-catalog__title Дополнительные товары
+		._wrapper.additionals-catalog-wrapper
+			table.extra-good
+				thead.page__hidden
+					tr
+					- const TABLE_HEADLINES = ["Название", "Количество", "Цена", "Действие"]
+					each headline in TABLE_HEADLINES
+						th=headline
+				tbody._table
+					each additional in additionals
+						tr.extra-good__item
+							td.extra-good__name=additional.title
+							td.extra-good__amount=additional.amount
+							td.extra-good__price=additional.price + ' '
+								abbr(title="Рублей") Р
+							td.extra-good__cta
+								button.button.extra-good__button Заказать
+			aside.promo
+				svg._icon(width=80 height=80 aria-hidden="true" fill="currentColor")
+								use(href=`img/catalog.svg#present`)
+				p._title Закажите все <br>и получите чехол для кота в подарок!

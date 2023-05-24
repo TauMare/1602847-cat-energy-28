@@ -2,17 +2,7 @@
 
 
 @mixin underline {
-    position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: -30px;
-        width: 118%;
-        height: 0;
-        border: 1px solid #EBEBEB;
-    }
+    border-bottom: 1px solid #EBEBEB;
 }
 
 @mixin inputIcon($color: "000000") {
@@ -56,11 +46,6 @@
     }
 }
 
-.form__title {
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 36px;
-};
 
 .form__subtitle {
     font-size: 14px;
@@ -110,18 +95,14 @@
     text-transform: uppercase;
 }
 
-.form {
-    padding-inline: var(--side-offset);
-}
-
 .main__personal {
     border: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-
-    @include underline;
+    gap: 14px;
+    padding-inline: var(--side-offset);
 }
 
 .main__input-wrapper {
@@ -137,22 +118,8 @@
 .main__title {
     padding-right: 13px;
     font-size: 16px;
-
-    // выставить возраст(лет) по макету
 }
 
-.main__input {
-    font-size: 16px;
-    height: 45px;
-    display: block;
-    padding: 14px 20px;
-    outline: none;
-    border: 1px solid #E7E7E7;
-
-    @include input(14px, 20px, 14px, 20px);
-
-    flex-grow: 1;
-}
 
 .goals {
     border: none;
@@ -161,8 +128,6 @@
     flex-direction: column;
     padding: 0;
     padding-bottom: 19px;
-
-    @include underline;
 }
 
 .goals__choose {
@@ -185,13 +150,9 @@
     line-height: 26px;
     padding: 0;
     margin-bottom: 35px;
-
-    @include title(103px);
 }
 
 .contacts__input-wrapper {
-    display: flex;
-    align-items: center;
     margin-bottom: 14px;
 
     &:last-child {
@@ -250,8 +211,6 @@
 
 .about__title {
     width: 121px;
-
-    @include title(165px);
 }
 
 .about__input {
@@ -272,16 +231,10 @@
 }
 
 .additionals {
-    border: none;
-    padding: 0;
-    margin: 0;
+
     display: flex;
     flex-direction: column;
     margin-bottom: 34px;
-}
-
-.additionals__title {
-    @include title(145px); //120
 }
 
 .additionals__choose {
@@ -368,35 +321,6 @@
     }
 }
 
-.additionals {
-    // margin-inline: var(--side-offset);
-}
-
-.catalog__additional-title {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    margin-inline: auto;
-}
-
-.catalog__additional-subtitle {
-    color: $light-black;
-    font-family: $font-additional;
-    font-size: 12px;
-    line-height: 16px;
-    margin-inline: auto;
-}
-
-.catalog__additional {
-    display: flex;
-    flex-direction: column;
-}
-
-.catalog__additional-icon {
-    margin-inline: auto;
-}
-
-
 
 .additionals__choose--checkbox {
     display: flex;
@@ -434,5 +358,87 @@
 
     .additionals__input--checkbox:disabled + .additionals__checkbox &, .additionals__input--checkbox--disabled + .additionals__checkbox &{
         opacity: 0.3;
+    }
+}
+
+@media (width >= $tablet-width) { 
+    .form__title {
+        margin: 0;
+        margin-block: 65px 54px;
+        margin-inline: 70px;
+    }
+
+    .form__subtitle {
+        font-size: 20px;
+        line-height: 30px;
+        margin-inline: 70px;
+        margin-bottom: 66px;
+    }
+
+    .main__personal {
+        margin-bottom: 72px;
+        padding-inline: 70px;
+    }
+
+    .input {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .goals {
+        margin: 0;
+        padding: 25px;
+        margin-inline: 71px;
+        border: 1px solid #E7E7E7;
+        margin-bottom: 71px;
+    }
+
+    .goals__label {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .line-section__wrapper .input {
+        margin-block: 20px;
+    }
+
+    .about__input {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@media (width >=$desktop-width) { 
+
+    .main {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+    }
+    .main__contacts {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    .main__comment {
+        grid-column: 1/3;
+    }
+    .main__additionals {
+        grid-column: 1/3;
+        flex-direction: row;
+    }
+    .line-section__wrapper--form {
+        flex-direction: row;
+        gap: 30px;
+    }
+    .additionals__choose {
+        margin: 0;
+    }
+    .main__button {
+        max-width: 568px;
+        height: 40px;
+        margin-left: 120px;
+    }
+    .about__input {
+        width: 100%;
     }
 }

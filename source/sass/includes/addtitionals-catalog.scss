@@ -1,7 +1,9 @@
 @use "./variables.scss" as *;
 
 .additionals-catalog {
-    margin-inline: var(--side-offset);
+    margin-block: 20px 0;
+    padding-top: 50px;
+    // margin-inline: var(--side-offset);
 }
 
 .extra-good {
@@ -33,33 +35,9 @@
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
-    // grid-template-rows: repeat(3, 1fr);
     grid-template-rows: 16px 42px 40px;
     align-items: center;
     position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: -13px;
-        left: 0;
-        width: 100%;
-        height: 0;
-        border: 1px solid #CDCDCD;
-    }
-
-    &:last-child {
-        &::after {
-            content: "";
-            position: absolute;
-            top: calc(100% + 13px);
-            left: 0;
-            width: 100%;
-            height: 0;
-            border: 1px solid #CDCDCD;
-        }
-    }
 };
 
 .extra-good__name {
@@ -78,19 +56,80 @@
     width: 100%;
 }
 
-.additionals-catalog__title {
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 400;
-    position: relative;
+@media (width >= $tablet-width) {
+    .extra-good {
+        border: 1px solid #CDCDCD;
+    }
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 16px;
-        left: calc(83% + 14px);
-        width: 53px;
-        height: 0;
-        border: 2px solid #68B738;
+    .extra-good__item {
+        margin: 0;
+        padding-block: 28px;
+        padding-inline: 38px;
+
+        border-bottom: 1px solid #CDCDCD;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    .extra-good__name {
+        font-size: 20px;
+        line-height: 20px;
+        padding-bottom: 25px;
+    }
+
+    .extra-good__amount {
+        font-size: 16px;
+        line-height: 20px;
+        
+        padding-bottom: 25px;
+        margin-left: auto;
+    }
+
+    .extra-good__price {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+        padding-bottom: 25px;
+        margin-left: 50px;
+    }
+
+    .extra-good__cta {
+        width: 100%;
+    }
+
+
+    .extra-good__button {
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (width >=$desktop-width) { 
+    .additionals-catalog-wrapper {
+        display: flex;
+    }
+    .extra-good {
+        border: none;
+    }
+    .extra-good__cta {
+        max-width: 244px;
+    }
+
+    .extra-good__name {
+        padding-bottom: 0px;
+    }
+
+    .extra-good__amount {
+        padding-bottom: 0px;
+        margin-left: auto;
+    }
+
+    .extra-good__price {
+        padding-bottom: 0px;
     }
 }

@@ -66,6 +66,7 @@ $mob-bg-h: 302px;
         background: none;
         color: inherit;
         text-align: left;
+        padding-top: 62px;
         padding-inline: calc(var(--side-offset) + 88px);
         padding-block-end: 526px;
 
@@ -74,12 +75,33 @@ $mob-bg-h: 302px;
         }
     }
 
+    .intro__title {
+        font-size: 60px;
+        line-height: 60px;
+        margin-bottom: 41px;
+    }
+
+    .intro__subtitle {
+        font-size: 20px;
+        line-height: 20px;
+        margin: 0;
+        margin-bottom: 49px;
+    }
+
+    .intro__button {
+        max-width: 244px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
     .intro__pic {
         position: absolute;
         bottom: 0;
         right: var(--side-offset);
         z-index: -1;
     }
+
+
 }
 
 @media (width >=$desktop-width) {
@@ -107,5 +129,9 @@ $mob-bg-h: 302px;
     	right: calc(50% - 320px);
 	    top: calc(50% - 210px);
         z-index: -1;
+    }
+
+    .intro__title {
+        max-width: 414px;
     }
 }

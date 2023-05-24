@@ -3,6 +3,7 @@
 .page {
     --side-offset: 20px;
     --accent: #{$accent};
+    --back: hsl(0, 0%, 100%);
 	font: {
 		family: $font-main;
 		weight: 400;
@@ -12,13 +13,7 @@
 	line-height: calc(24 / 16);
 	color: #000000;
 
-    @media (width >= $tablet-width) {
-        --side-offset: 30px;
-    }
-    
-    @media (width >= $desktop-width) {
-        --side-offset: calc(50% - #{$container-width} / 2);
-    }
+    background-color: var(--back);
 }
 
 .page__body {
@@ -26,12 +21,18 @@
 }
 
 .page__title {
-    font-size: 24px;
-    line-height: 28px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1;
+    color: #000000;
 }
 
 .page__subtitle {
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+
+    color: #000000;
 }
 
 .page__no-list {
@@ -51,3 +52,23 @@
     overflow: hidden;
 }
 
+@media (width >= $tablet-width) {
+    .page {
+        --side-offset: 30px;
+    }
+    
+    .page__title {
+        font-size: 60px;
+    }
+    
+    .page__subtitle {
+        font-size: 36px;
+    }
+}
+
+@media (width >= $desktop-width) {
+    .page {
+        --side-offset: calc(50% - #{$container-width} / 2);
+    }
+    
+}

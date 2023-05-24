@@ -1,0 +1,98 @@
+@use "./variables.scss" as *;
+
+.comparison {
+    position: relative;
+    --exposure: 50%;
+    display: grid;
+    place-items: center;
+    margin-inline: auto;
+    width: fit-content;
+}
+
+.comparison__before, .comparison__after  {
+    display: flex;
+  }
+
+.comparison__before .comparison__image {
+  clip-path: polygon(0 0, var(--exposure, 50%) 0, var(--exposure, 50%) 100%, 0% 100%);
+}
+.comparison__after .comparison__image {
+  clip-path: polygon(100% 0, var(--exposure, 50%) 0, var(--exposure, 50%) 100%, 100% 100%);
+}
+
+
+.comparison__after {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .comparison__button {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 25px);
+    border: none;
+    background:none;
+    background-image: url('../img/intro.svg#slider');
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    font-size: 0;
+    isolation: isolate;
+
+    &::before {
+        position: absolute;
+        top: -100px;
+        left: 46%;
+        content: "";
+        width: 4px;
+        height: 256px;
+        background-color: #666666;
+        border-radius: 2px;
+        z-index: -1;
+    }
+  }
+
+@media (width >= $tablet-width) {
+  .comparison__button {
+    &::before {
+      position: absolute;
+        top: -256px;
+        left: 46%;
+        content: "";
+        width: 4px;
+        height: 512px;
+        background-color: #666666;
+        border-radius: 2px;
+        z-index: -1;
+    }
+  }
+}
+
+@media (width >= $desktop-width) {
+  .comparison__button {
+    position: absolute;
+    top: calc(150% - 50px);
+    left: calc(50% - 25px);
+    border: none;
+    background:none;
+    background-image: url('../img/intro.svg#slider');
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    font-size: 0;
+    isolation: isolate;
+
+    &::before {
+        position: absolute;
+        top: -100px;
+        left: 46%;
+        content: "";
+        width: 4px;
+        height: 256px;
+        background-color: #666666;
+        border-radius: 2px;
+        z-index: -1;
+    }
+  }
+}

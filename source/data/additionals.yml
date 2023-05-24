@@ -13,3 +13,8 @@
 - title: витамины
   amount: 1 упаковка (30 г)
   price: 300
+
+# Комиты в эту ветку
+# git switch master
+# git merge это_ветка
+# git push

@@ -43,22 +43,14 @@
 
 .program__link {
     margin-block: 42px 11px;
-    margin-left: 19px;
+    margin-inline: var(--side-offset);
     line-height: 16px;
     text-decoration: none;
     color: #000000;
     text-transform: uppercase;
-    position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: -15px;
-        left: 0;
-        width: 240px;
-        height: 1px;
-        border: 1px solid #E6E6E6;
-    }
+    border-top: 1px solid #D9D9D9;
+    padding-top: 19px;
 };
 
 .program__icon--stay {
@@ -77,28 +69,98 @@
     margin-left: 15px;
 }
 
-//уточнить по реализации состояний 
-
 @media (width >= $tablet-width) {
+    .program {
+        padding: 77px 62px 52px 53px;
+    }
+
     .program__icon--stay {
         width: 200px; 
         height: 211px;
+        position: absolute;
+        margin-right: 0;
+        right: 0;
+        top: 0;
     }
 
     .program__icon--walk {
         width: 268px;
         height: 200px;
+
+        position: absolute;
+        margin-right: 0;
+        right: -30px;
+        top: 0;
+    }
+
+    .program__title-wrapper {
+        flex-direction: row;
+        justify-content: normal;
+        position: relative;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .program__title {
+        margin: 0;
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .program__subtitle {
+        max-width: 48%;
+        font-size: 16px;
+        line-height: 24px;
+        
+        padding: 0;
+
+        margin-block: 24px 52px;
+    }
+
+    .program__link {
+        border: none;
+        font-size: 20px;
+        line-height: 30px;
+
+        margin: 0;
+        padding: 0;
     }
 }
 
-@media (width >= $desktop-width) {
+
+@media (width >=$desktop-width) {
+    .programs {
+        flex-direction: row;
+    } 
+    .program {
+        padding: 40px;
+        padding-bottom: 20px;
+        max-width: 570px;
+    }
+    .program__title-wrapper {
+        flex-direction: row-reverse;
+    }
     .program__icon--stay {
+        position: relative;
         width: 100px; 
         height: 106px;
+        right: 0;
+        top: 0;
+        margin-right: auto;
     }
 
     .program__icon--walk {
+        position: relative;
         width: 134px;
         height: 100px;
+        right: 0;
+        top: 0;
+        margin-right: auto;
     }
+
+    .program__subtitle {
+        max-width: 457px;
+    }
+
 }

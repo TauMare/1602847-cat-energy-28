@@ -1,0 +1,78 @@
+@use "./variables.scss" as *;
+
+.input {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 1.12;
+
+    text-transform: uppercase;
+    color: $light-black;
+    position: relative;
+}
+
+
+
+.input__field { 
+    font: inherit;
+    text-transform: inherit;
+    color: inherit;
+    width: 100%;
+    padding: 14px 20px;
+    outline: none;
+    box-shadow: inset 0 0 0 1px #E7E7E7;
+    border: none;
+    min-width: auto;
+    
+    &:hover {
+        box-shadow: inset 0 0 0 1px #CDCDCD;
+    }
+
+    &:focus {
+        box-shadow: inset 0 0 0 2px #444444;
+    }
+
+    &[aria-invalid="true"] {
+        box-shadow: inset 0 0 0 2px $error;
+    }
+
+    :is([type="email"], [type="tel"]) {
+        padding-right: 20px;
+    }
+
+    &:focus + .input__icon {
+        background-color: var(--accent);
+    }
+
+    &:focus + .input__icon {
+        background-color: $error;
+    }
+}
+
+.input__field[type="email"] + .input__icon {
+    mask-image: url("../img/form.svg#mail");
+}
+
+.input__field[type="tel"] + .input__icon {
+    mask-image: url("../img/form.svg#phone");
+}
+
+.input__icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #444444;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
