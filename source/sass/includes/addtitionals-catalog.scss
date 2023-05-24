@@ -3,6 +3,7 @@
 .additionals-catalog {
     margin-block: 20px 0;
     padding-top: 50px;
+
     // margin-inline: var(--side-offset);
 }
 
@@ -65,9 +66,7 @@
         margin: 0;
         padding-block: 28px;
         padding-inline: 38px;
-
         border-bottom: 1px solid #CDCDCD;
-
         display: flex;
         flex-wrap: wrap;
 
@@ -85,7 +84,6 @@
     .extra-good__amount {
         font-size: 16px;
         line-height: 20px;
-        
         padding-bottom: 25px;
         margin-left: auto;
     }
@@ -113,23 +111,25 @@
     .additionals-catalog-wrapper {
         display: flex;
     }
+
     .extra-good {
         border: none;
     }
+
     .extra-good__cta {
         max-width: 244px;
     }
 
     .extra-good__name {
-        padding-bottom: 0px;
+        padding-bottom: 0;
     }
 
     .extra-good__amount {
-        padding-bottom: 0px;
+        padding-bottom: 0;
         margin-left: auto;
     }
 
     .extra-good__price {
-        padding-bottom: 0px;
+        padding-bottom: 0;
     }
 }

@@ -48,7 +48,6 @@
     text-decoration: none;
     color: #000000;
     text-transform: uppercase;
-
     border-top: 1px solid #D9D9D9;
     padding-top: 19px;
 };
@@ -86,7 +85,6 @@
     .program__icon--walk {
         width: 268px;
         height: 200px;
-
         position: absolute;
         margin-right: 0;
         right: -30px;
@@ -97,7 +95,6 @@
         flex-direction: row;
         justify-content: normal;
         position: relative;
-
         margin: 0;
         padding: 0;
     }
@@ -112,9 +109,7 @@
         max-width: 48%;
         font-size: 16px;
         line-height: 24px;
-        
         padding: 0;
-
         margin-block: 24px 52px;
     }
 
@@ -122,7 +117,6 @@
         border: none;
         font-size: 20px;
         line-height: 30px;
-
         margin: 0;
         padding: 0;
     }
@@ -133,14 +127,17 @@
     .programs {
         flex-direction: row;
     } 
+
     .program {
         padding: 40px;
         padding-bottom: 20px;
         max-width: 570px;
     }
+
     .program__title-wrapper {
         flex-direction: row-reverse;
     }
+
     .program__icon--stay {
         position: relative;
         width: 100px; 

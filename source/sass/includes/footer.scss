@@ -28,7 +28,6 @@
     border-color: #D9D9D9;
     border-left: none;
     border-right: none;
-    
     padding-block: 20px;
 
 };
@@ -49,6 +48,7 @@
         
     &:active {
         --color: #{rgba($accent, 30%)};
+
         color: hsl(0deg 0% 27% / 30%);
     };
 }

@@ -2,7 +2,9 @@
 
 .comparison {
     position: relative;
+
     --exposure: 50%;
+
     display: grid;
     place-items: center;
     margin-inline: auto;
@@ -16,6 +18,7 @@
 .comparison__before .comparison__image {
   clip-path: polygon(0 0, var(--exposure, 50%) 0, var(--exposure, 50%) 100%, 0% 100%);
 }
+
 .comparison__after .comparison__image {
   clip-path: polygon(100% 0, var(--exposure, 50%) 0, var(--exposure, 50%) 100%, 100% 100%);
 }

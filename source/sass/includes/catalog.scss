@@ -13,11 +13,9 @@
 .product {
     display: grid;
     grid-template-columns: repeat(2, 50%);
-
     grid-template-rows: 60px 60px 53px;
     align-content: center;
     padding-block: 25px;
-    
     border-bottom: 1px solid #EBEBEB;  
 };
 
@@ -32,7 +30,6 @@
     font-weight: 400;
     font-size: 36px;
     line-height: 36px;
-
     margin: 0;
     padding-block: 27px 41px;
     width: 100%;
@@ -203,7 +200,6 @@
     }
 
     .catalog__additional-subtitle {
-        margin: 0;
         width: 70%;
         text-align: center;
         margin: 0;
