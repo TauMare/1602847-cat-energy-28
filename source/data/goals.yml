@@ -1,0 +1,14 @@
+- name: loss
+  label: Похудение
+  checked: true
+  disabled: false
+
+- name: gain
+  label: Набор массы
+  checked: false
+  disabled: false
+
+- name: none
+  label: Не знаю (Нужен ваш совет)
+  checked: false
+  disabled: false

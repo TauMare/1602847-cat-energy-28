@@ -1,74 +1,74 @@
 @use "./variables.scss" as *;
 
 .address--secondary {
-    background-color: #F2F2F2;
-    display: flex;
-    flex-direction: column;
+	background-color: #F2F2F2;
+	display: flex;
+	flex-direction: column;
 }
 
 .address__title {
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 20px;
-    text-transform: uppercase;
-    color: #111111;
-    width: 130px;
+	font-size: 16px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #111111;
+	width: 130px;
 }
 
 .address__link {
-    font-family: $font-additional;
-    font-size: 14px;
-    color: $light-black;
-    text-transform: none;
-    line-height: 20px;
-    font-style: normal;
-    text-decoration: none;
+	font-family: $font-additional;
+	font-size: 14px;
+	color: $light-black;
+	text-transform: none;
+	line-height: 20px;
+	font-style: normal;
+	text-decoration: none;
 }
 
 .address__wrapper {
-    margin-inline: var(--side-offset);
-    padding-block: 26px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	margin-inline: var(--side-offset);
+	padding-block: 26px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 };
 
 
-@media (width >= $tablet-width) { 
-    .address__wrapper {
-        padding-inline: 70px;
-        margin-block: 30px;
-    }
+@media (width >= $tablet-width) {
+	.address__wrapper {
+		padding-inline: 70px;
+		margin-block: 30px;
+	}
 
-    .address__title  {
-        min-width: 171px;
-        font-size: 20px;
-        line-height: 26px;
-    }
+	.address__title  {
+		min-width: 171px;
+		font-size: 20px;
+		line-height: 26px;
+	}
 
-    .address__map {
-        width: 100%;
-        height: 400px;
-    }
+	.address__map {
+		width: 100%;
+		height: 400px;
+	}
 
-    .address__link {
-        font-size: 16px;
-        line-height: 20px;
-        text-align: right;
-    }
+	.address__link {
+		font-size: 16px;
+		line-height: 20px;
+		text-align: right;
+	}
 
-    .address__city {
-        display: block;
-        margin-top: 10px;
-    }
+	.address__city {
+		display: block;
+		margin-top: 10px;
+	}
 
 }
 
 @media (width >=$desktop-width) {
-    .address__wrapper {
-        position: absolute;
-        margin-top: 140px;
-        background-color: #FFFFFF;
-    }
+	.address__wrapper {
+		position: absolute;
+		margin-top: 140px;
+		background-color: #FFFFFF;
+	}
 }

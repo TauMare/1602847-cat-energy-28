@@ -1,42 +1,40 @@
 @use "./variables.scss" as *;
 
 .button {
-    font-family: $font-main;
-    text-transform: uppercase;
-    text-decoration: none; // for anchor tags
-    color: $extra-white;
-    background-color: $accent; 
-    border: none; // for button tags
-    cursor: pointer; // for button tags
-    display: inline-flex;
-    padding-block: 14px;
-    padding-inline: 26px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+	font-family: $font-main;
+	text-transform: uppercase;
+	text-decoration: none; // for anchor tags
+	color: $extra-white;
+	background-color: $accent;
+	border: none; // for button tags
+	cursor: pointer; // for button tags
+	display: inline-flex;
+	padding-block: 14px;
+	padding-inline: 26px;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
 
-    &:is(:hover, :focus-visible) {
-        color: #FFFFFF;
-    }
+	&:is(:hover, :focus-visible) {
+		color: #FFFFFF;
+	}
 
-    &:active {
-        color: #FFFFFF4D;
-    }
+	&:active {
+		color: #FFFFFF4D;
+	}
 
-    &--secondary {
-        background-color: #dedede;
-        color: $light-black;
-        font-size: 16px;
+	&--secondary {
+		background-color: #dedede;
+		color: $light-black;
+		font-size: 16px;
 
-        &:is(:hover, :focus-visible) {
-            color: $light-black;
-            background-color: #EBEBEB;
-        }
-    
-        &:active {
-            color: #4444444D;
-        }
-    }
+		&:is(:hover, :focus-visible) {
+			color: $light-black;
+			background-color: #EBEBEB;
+		}
+
+		&:active {
+			color: #4444444D;
+		}
+	}
 }
-
-

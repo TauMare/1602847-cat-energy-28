@@ -1,21 +1,30 @@
 @use "common/global";
 
-// Bloсks
+@use "includes/input.scss";
+@use "includes/button";
+@use "includes/line-section.scss";
+@use "includes/burger.scss";
 @use "includes/page";
 @use "includes/logo";
-@use "includes/button";
+
 @use "includes/header.scss";
-@use "includes/input.scss";
-@use "includes/intro.scss";
 @use "includes/address.scss";
-@use "includes/line-section.scss";
-@use "includes/addtitionals-catalog.scss";
-@use "includes/catalog.scss";
-@use "includes/features.scss";
-@use "includes/form.scss";
-@use "includes/programs.scss";
-@use "includes/promo.scss";
-@use "includes/showcase.scss";
-@use "includes/comparison";
 @use "includes/footer.scss";
-@use "includes/burger.scss";
+
+@use "includes/index/intro.scss";
+@use "includes/index/programs.scss";
+@use "includes/index/features.scss";
+@use "includes/index/showcase.scss";
+@use "includes/index/comparison";
+
+@use "includes/catalog/catalog.scss";
+@use "includes/catalog/promo.scss";
+@use "includes/catalog/above.scss";
+@use "includes/catalog/extra-goods.scss";
+
+@use "includes/form/form.scss";
+@use "includes/form/personal.scss";
+@use "includes/form/goals.scss";
+@use "includes/form/contacts";
+@use "includes/form/extra.scss";
+@use "includes/form/additional.scss";

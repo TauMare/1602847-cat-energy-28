@@ -1,0 +1,5 @@
+fieldset.personal
+	legend.page__hidden Введите данные о Вашем котике.
+	each input in personal
+		label.personal__input.input=input.label
+			input.personal__field.input__field(type=`${input.type}` name=`${input.name}` placeholder=`${input.placeholder}` value=`${input.value}` required=input.required)

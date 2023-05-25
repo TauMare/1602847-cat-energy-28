@@ -1,0 +1,38 @@
+@use "./variables.scss" as *;
+
+.contacts {
+	border: none;
+
+	margin: 0;
+	padding: 0;
+
+	margin-top: 25px;
+	padding-bottom: 25px;
+	padding-inline: var(--side-offset);
+}
+
+.contacts__field {
+	padding: 14px 40px 14px 15px;
+}
+
+.contacts__container {
+	font-size: 24px;
+	line-height: 26px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.contacts__title {
+	margin: 0;
+	margin-bottom: 35px;
+}
+
+@media (width >= $tablet-width) {
+
+}
+
+@media (width >=$desktop-width) {
+
+}

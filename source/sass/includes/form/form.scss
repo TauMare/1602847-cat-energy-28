@@ -1,0 +1,42 @@
+@use "./variables.scss" as *;
+
+.form-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-section__title {
+	padding: 0;
+	margin: 0;
+	margin-block: 27px 37px;
+	padding-inline: var(--side-offset);
+}
+
+.form-section__subtitle {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 39px;
+	padding-inline: var(--side-offset);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form__button {
+	margin-inline: var(--side-offset);
+	max-width: 280px;
+}
+
+.form__required {
+	margin-inline: auto;
+}
+
+@media (width >= $tablet-width) {
+
+}
+
+@media (width >=$desktop-width) {
+
+}

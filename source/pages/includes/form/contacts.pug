@@ -1,0 +1,8 @@
+fieldset.contacts
+	legend._container
+		p._title Контактные данные<br> (владельца кота)
+		each input in contacts
+			label._input.input=input.label
+					input._field.input__field(type=`${input.type}` name=`${input.type}` placeholder=`${input.placeholder}` required=input.required)
+					span._icon.input__icon
+

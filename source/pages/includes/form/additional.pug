@@ -1,0 +1,10 @@
+fieldset.additional
+	legend._container
+		p._title Дополнительно
+		each input in additional
+			label._choose
+				input._input.page__hidden(type="checkbox" name=`${input.name}` id=`${input.name}` value=`${input.name}` checked=input.checked)
+				span._checkbox
+					svg._checkbox-icon(width=26 height=26 aria-hidden="true" fill="currentColor")
+						use(href=`img/form.svg#tick`)
+				span._label=input.label
