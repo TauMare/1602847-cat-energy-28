@@ -7,7 +7,7 @@
 	grid-template-rows: 50% 50%;
 	align-items: center;
 	justify-items: center;
-	margin-top: 54px;
+	margin-top: 35px;
 	margin-inline: var(--side-offset);
 	height: 280px;
 	background-color: $accent;
@@ -16,18 +16,19 @@
 	opacity: 1;
 
 	&::before {
-	content: "";
-	position: absolute;
-	inset: 0 0 auto;
-	width: 100%;
-	height: 280px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	opacity: 0.15;
-	z-index: -1;
+		content: "";
+		position: absolute;
+		inset: 0 0 auto;
+		width: 100%;
+		height: 280px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		opacity: 0.15;
+		z-index: -1;
+		background-color: $accent;
 
-	@include adaptive-bg('../img/gift', "png");
+		@include adaptive-bg('../img/gift', "png");
 	}
 
 	margin-bottom: 35px;
@@ -64,6 +65,7 @@
 			background-size: cover;
 			opacity: 0.15;
 			z-index: -1;
+			background-color: $accent;
 
 			@include adaptive-bg('../img/gift', "png");
 		}

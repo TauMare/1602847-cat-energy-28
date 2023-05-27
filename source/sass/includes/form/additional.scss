@@ -1,72 +1,24 @@
 @use "./variables.scss" as *;
 
 .additional {
-	border: none;
-	padding-inline: var(--side-offset);
+	// padding-inline: var(--side-offset);
 }
 
 .additional__container {
-	display: flex;
-	flex-direction: column;
-	gap: 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+	margin-bottom: 34px;
 }
 
 .additional__title {
 	padding: 0;
 	margin: 0;
-
 	margin-bottom: 34px;
-
 	font-size: 24px;
 	line-height: 26px;
 }
 
-.additional__label {
-	text-transform: uppercase;
-	font-size: 16px;
-	line-height: 18px;
-
-	.additional__input:disabled ~ &, .additional__input--disabled ~ & {
-		opacity: 0.3;
-	}
-}
-
-.additional__choose {
-	display: flex;
-	align-items: center;
-	gap: 14px;
-}
-
-
-.additional__checkbox {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 40px;
-	border: 1px solid #CDCDCD;
-
-	.additional__input:is(:hover, :focus, :focus-visible) + &{
-		border: 1px solid #BABABA;
-	}
-
-	.additional__input:disabled + &, .additional__input--disabled + &{
-		opacity: 0.3;
-	}
-}
-
-.additional__checkbox-icon {
-	display: none;
-
-	.additional__input:checked + .additional__checkbox &{
-		display: block;
-		color: $accent;
-	}
-
-	.additional__input:disabled + .additional__checkbox &, .additional__input--disabled + .additional__checkbox &{
-		opacity: 0.3;
-	}
-}
 
 @media (width >= $tablet-width) {
 

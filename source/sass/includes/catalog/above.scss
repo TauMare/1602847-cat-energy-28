@@ -1,10 +1,25 @@
 @use "./variables.scss" as *;
 
+.above-container {
+	border-top: 1px solid #EBEBEB;
+	border-bottom: 1px solid #EBEBEB;
+	padding-block: 25px;
+	padding-inline: var(--side-offset);
+	display: flex;
+	flex-direction: column;
+}
+
+.above-container__button {
+	height: 40px;
+}
+
 .above-container__title {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 20px;
 	margin-inline: auto;
+	text-transform: uppercase;
+	margin-block: 23px 8px;
 }
 
 .above-container__subtitle {
@@ -13,11 +28,7 @@
 	font-size: 12px;
 	line-height: 16px;
 	margin-inline: auto;
-}
-
-.above-container {
-	display: flex;
-	flex-direction: column;
+	margin-block: 0 21px;
 }
 
 .above-container__icon {

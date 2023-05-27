@@ -13,7 +13,7 @@
 .footer__logo {
 	text-decoration: none;
 	justify-self: center;
-	color: $light-black;
+	color: #111111;
 	display: block;
 }
 
@@ -26,6 +26,7 @@
 	position: relative;
 	border-style: solid;
 	border-color: #D9D9D9;
+	border-width: 1px;
 	border-left: none;
 	border-right: none;
 	padding-block: 20px;

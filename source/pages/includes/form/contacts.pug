@@ -1,8 +1,7 @@
-fieldset.contacts
-	legend._container
-		p._title Контактные данные<br> (владельца кота)
+div(role="group" aria-labelledby="contacts-title").line-section.-form.contacts
+	h2#contacts-title._title.page__subtitle Контактные данные<br> (владельца кота)
+	.contacts__container
 		each input in contacts
-			label._input.input=input.label
-					input._field.input__field(type=`${input.type}` name=`${input.type}` placeholder=`${input.placeholder}` required=input.required)
-					span._icon.input__icon
-
+			label.input=input.label
+				input._field.-icon(type=`${input.type}` name=`${input.type}` placeholder=`${input.placeholder}` required=input.required)
+				span._icon

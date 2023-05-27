@@ -17,6 +17,9 @@
 	margin: 0;
 	margin-bottom: 39px;
 	padding-inline: var(--side-offset);
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
 }
 
 .form {
@@ -24,19 +27,39 @@
 	flex-direction: column;
 }
 
+.form__footer {
+	padding-inline: var(--side-offset);
+	display: grid;
+	place-items: center;
+}
+
 .form__button {
-	margin-inline: var(--side-offset);
-	max-width: 280px;
+	width: 100%;
 }
 
 .form__required {
-	margin-inline: auto;
+	font-family: $font-additional;
+	font-size: 14px;
+	line-height: 16px;
+	padding-block: 21px 32px;
 }
 
 @media (width >= $tablet-width) {
+	.form__footer  {
+		grid-template-columns: 200px auto;
+		justify-items: start;
+		gap: 40px;
+		margin-inline: 40px;
+	}
 
 }
 
 @media (width >=$desktop-width) {
+
+	.form__footer  {
+		grid-template-columns: 200px auto;
+		margin-inline: 0;
+	}
+
 
 }

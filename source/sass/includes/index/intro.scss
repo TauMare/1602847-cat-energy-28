@@ -19,12 +19,13 @@ $mob-bg-h: 302px;
 		inset: 0 0 auto;
 		width: 100%;
 		height: $mob-bg-h;
-		background-image: url("../images/intro-bg.svg");
+		background-image: url("./images/intro-bg.svg");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 		opacity: 0.2;
 		z-index: -1;
+		background-color: $accent;
 
 		@include adaptive-bg('../img/index-background', "png");
 	}
@@ -37,9 +38,9 @@ $mob-bg-h: 302px;
 	font-size: 36px;
 	line-height: 1;
 	margin-block: 0 25px;
+	margin-inline: auto;
+	max-width: 16ch;
 }
-
-;
 
 .intro__subtitle {
 	font-size: 14px;
@@ -56,6 +57,7 @@ $mob-bg-h: 302px;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: $white;
+	height: 40px;
 }
 
 ;
@@ -79,6 +81,7 @@ $mob-bg-h: 302px;
 		font-size: 60px;
 		line-height: 60px;
 		margin-bottom: 41px;
+		margin-inline: 0;
 	}
 
 	.intro__subtitle {
@@ -131,7 +134,7 @@ $mob-bg-h: 302px;
 		z-index: -1;
 	}
 
-	.intro__title {
-		max-width: 414px;
-	}
+	// .intro__title {
+	// 	max-width: 414px;
+	// }
 }

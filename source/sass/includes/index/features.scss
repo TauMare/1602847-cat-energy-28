@@ -14,6 +14,7 @@
 
 .features__text {
 	font-family: $font-additional;
+	font-size: 14px;
 	line-height: 18px;
 	list-style-type: none;
 	color: $light-black;
@@ -23,11 +24,12 @@
 
 .features {
 	margin-inline: var(--side-offset);
+	padding-bottom: 30px;
 };
 
 .features__feature {
 	display: grid;
-	grid-template-columns: 50px auto;
+	grid-template-columns: 60px auto;
 	grid-column-gap: 20px;
 	align-items: center
 };
@@ -36,13 +38,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 	background-color: $accent;
 	grid-column: 1/2;
 };
 
-.feature__icon {
+.features__icon {
 	color: $white;
 };
 
@@ -89,7 +91,7 @@
 		height: 80px;
 	};
 
-	.feature__icon {
+	.features__icon {
 		width: 30px;
 		height: 32px;
 	}

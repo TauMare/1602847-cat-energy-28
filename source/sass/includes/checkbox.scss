@@ -1,0 +1,48 @@
+@use "./variables.scss" as *;
+
+.checkbox {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	align-items: center;
+}
+
+.checkbox__label {
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 18px;
+
+	.checkbox__native:disabled ~ & {
+		opacity: 0.3;
+	}
+}
+
+.checkbox__custom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #cdcdcd;
+
+	.checkbox__native:is(:hover, :focus, :focus-visible) + & {
+		border: 1px solid #bababa;
+	}
+
+	.checkbox__native:disabled + & {
+		opacity: 0.3;
+	}
+}
+
+.checkbox__tick {
+	display: none;
+
+	.checkbox__native:checked + .checkbox__custom & {
+		display: block;
+		color: $accent;
+	}
+
+	.checkbox__native:disabled + .checkbox__custom & {
+		opacity: 0.3;
+	}
+}

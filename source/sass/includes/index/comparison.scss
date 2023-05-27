@@ -4,11 +4,29 @@
 		position: relative;
 
 		--exposure: 50%;
+		--border-c: hsl(0, 0%, 40%);
 
 		display: grid;
 		place-items: center;
 		margin-inline: auto;
 		width: fit-content;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: calc(var(--exposure) - 2px);
+			content: "";
+			width: 4px;
+			height: 100%;
+			background-color: var(--border-c);
+			border-radius: 2px;
+			z-index: 1;
+		}
+
+
+		&:is(:hover, :focus-within) {
+			--border-c: var(--accent);
+		}
 }
 
 .comparison__before, .comparison__after  {
@@ -30,72 +48,57 @@
 		left: 0;
 	}
 
-	.comparison__button {
-		position: absolute;
-		top: calc(50% - 50px);
-		left: calc(50% - 25px);
-		border: none;
-		background:none;
-		background-image: url('../img/intro.svg#slider');
-		width: 50px;
-		height: 50px;
-		z-index: 1;
-		font-size: 0;
-		isolation: isolate;
+.comparison__button {
+	$border-w: 2px;
+	$size: 40px - $border-w * 2;
 
-		&::before {
-				position: absolute;
-				top: -100px;
-				left: 46%;
-				content: "";
-				width: 4px;
-				height: 256px;
-				background-color: #666666;
-				border-radius: 2px;
-				z-index: -1;
-		}
+	position: absolute;
+	top: calc(50% - $size / 2);
+	left: calc(50% - $size / 2);
+	background-color: #ffffff;
+	width: $size;
+	height: $size;
+	z-index: 3;
+	border: 2px solid var(--border-c);
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+
+	&::after {
+		content: "";
+		background-color: var(--border-c);
+		width: calc(24px / $size * 100%);
+		height: calc(18px / $size * 100%);
+		mask-image: url('../img/intro.svg#slider');
+
 	}
+}
 
 @media (width >= $tablet-width) {
 	.comparison__button {
-		&::before {
-			position: absolute;
-				top: -256px;
-				left: 46%;
-				content: "";
-				width: 4px;
-				height: 512px;
-				background-color: #666666;
-				border-radius: 2px;
-				z-index: -1;
-		}
+	
 	}
 }
 
 @media (width >= $desktop-width) {
 	.comparison__button {
-		position: absolute;
-		top: calc(150% - 50px);
-		left: calc(50% - 25px);
-		border: none;
-		background:none;
-		background-image: url('../img/intro.svg#slider');
-		width: 50px;
-		height: 50px;
-		z-index: 1;
-		font-size: 0;
-		isolation: isolate;
+	
+		// width: 50px;
+		// height: 50px;
+		// z-index: 1;
+		// font-size: 0;
+		// isolation: isolate;
 
-		&::before {
-				position: absolute;
-				top: -100px;
-				left: 46%;
-				content: "";
-				width: 4px;
-				height: 256px;
-				background-color: #666666;
-				border-radius: 2px;
-				z-index: -1;
-		}
+		// &::before {
+		// 		position: absolute;
+		// 		top: -100px;
+		// 		left: 46%;
+		// 		content: "";
+		// 		width: 4px;
+		// 		height: 256px;
+		// 		background-color: #666666;
+		// 		border-radius: 2px;
+		// 		z-index: -1;
+		// }
 	}
 }
