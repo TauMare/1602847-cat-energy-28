@@ -7,6 +7,9 @@
 };
 
 .features__title {
+	margin: 0;
+	margin-block: 15px 40px;
+
 	font-weight: 400;
 	font-size: 36px;
 	line-height: 40px;
@@ -53,14 +56,16 @@
 	.features__title {
 		font-size: 60px;
 		line-height: 60px;
+
+		margin-block: 41px 40px;
 	}
 
 	.features__list {
 		counter-reset: example 0;
 		grid-template-columns: auto auto;
 		grid-template-rows: auto auto;
-		column-gap: 20%;
-		row-gap: 23px;
+		column-gap: 49px;
+		row-gap: 44px;
 	}
 
 	.features__feature {
@@ -69,7 +74,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		padding-block: 40px 60px;
+		padding-block: 32px 60px;
 
 		&::before {
 			position: absolute;
@@ -97,7 +102,7 @@
 	}
 
 	.features__text {
-		width: 90%;
+		width: 78%;
 		font-size: 16px;
 		line-height: 24px;
 	}

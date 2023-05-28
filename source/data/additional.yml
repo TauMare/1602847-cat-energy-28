@@ -3,11 +3,11 @@
   checked: true
 
 - name: milk
-  label: молоко
+  label: питьевая вода
   checked: false
 
 - name: water
-  label: питьевая вода
+  label: молоко
   checked: false
 
 - name: vitamins

@@ -3,7 +3,7 @@
 .showcase {
 	padding-inline: var(--side-offset);
 	background-color: #EAEAEA;
-	padding-block: 25px 40px;
+	padding-block: 29px 40px;
 };
 
 .showcase__title {
@@ -15,30 +15,24 @@
 
 .showcase__subtitle {
 	font-family: $font-additional;
+	font-size: 14px;
 	line-height: 18px;
 	color: $light-black;
 	margin: 0;
 	margin-block: 40px 20px;
 }
 
-.showcase__summary dt, .showcase__summary dd {
-	font-size: 14px;
-	line-height: 20px;
-	text-transform: uppercase;
-	margin: 0;
-}
-
 .showcase__info {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 24px 10px;
+	grid-gap: 36px 33px;
 };
 
 .key-card {
 	border: 1px solid #cdcdcd;
 	border-radius: 3px;
 	position: relative;
-	padding: 15px 16px;
+	padding: 14px 16px;
 	text-align: center;
 }
 
@@ -69,6 +63,15 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.showcase__value {
+	margin: 0;
+	padding-left: 3px;
 }
 
 @media (width >= $tablet-width) {
@@ -98,10 +101,7 @@
 	.showcase__summary {
 		margin-left: auto;
 		flex-direction: column;
-		align-items: flex-end
-	}
-
-	.showcase__summary dt, .showcase__summary dd {
+		align-items: flex-end;
 		font-size: 20px;
 		line-height: 20px;
 	}

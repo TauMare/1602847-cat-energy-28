@@ -4,13 +4,24 @@
 	border: none;
 	display: flex;
 	flex-direction: column;
-	gap: 14px;
+	gap: 12px;
 	margin: 0;
 	padding: 0;
 	padding-bottom: 24px;
 	padding-inline: var(--side-offset);
 	border-bottom: 1px solid #D9D9D9;
 }
+
+.personal__field {
+	margin-left: 5px;
+	// width: 98%;
+}
+
+.personal__input {
+	padding-right: 5px;
+}
+
+
 
 @media (width >= $tablet-width) {
 

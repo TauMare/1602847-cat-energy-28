@@ -34,6 +34,8 @@
 }
 
 .form__button {
+	font-size: 16px;
+	line-height: 20px;
 	width: 100%;
 }
 
@@ -41,7 +43,7 @@
 	font-family: $font-additional;
 	font-size: 14px;
 	line-height: 16px;
-	padding-block: 21px 32px;
+	padding-block: 8px 17px;
 }
 
 @media (width >= $tablet-width) {

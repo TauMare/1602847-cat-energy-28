@@ -9,7 +9,7 @@
 	justify-items: center;
 	margin-top: 35px;
 	margin-inline: var(--side-offset);
-	height: 280px;
+	min-height: 290px;
 	background-color: $accent;
 	isolation: isolate;
 	position: relative;
@@ -20,7 +20,7 @@
 		position: absolute;
 		inset: 0 0 auto;
 		width: 100%;
-		height: 280px;
+		min-height: 290px;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -35,6 +35,8 @@
 }
 
 .promo__title {
+	margin: 0;
+
 	font-family: $font-additional;
 	line-height: 20px;
 	color: #FFFFFF;
@@ -43,7 +45,10 @@
 }
 
 .promo__icon {
-	align-self: flex-end;
+	margin-top: 53px;
+	// top: -6px;
+    // position: relative;
+	// align-self: flex-end;
 }
 
 

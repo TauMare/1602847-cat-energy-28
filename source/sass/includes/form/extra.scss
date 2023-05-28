@@ -5,6 +5,10 @@
 	// padding-inline: var(--side-offset);
 }
 
+.extra__title {
+	margin-bottom: 41px;
+}
+
 .extra__legend {
 	// display: flex;
 	// flex-direction: column;
@@ -30,7 +34,7 @@
 	font-family: $font-main;
 	font-size: 16px;
 	line-height: 18px;
-	padding: 10px 15px 0 12px;
+	padding: 8px 15px 15px 14px;
 	color: #000000;
 
 	&:is(:hover) {

@@ -4,7 +4,7 @@
 	border: none;
 	display: flex;
 	flex-direction: column;
-	gap: 14px;
+	gap: 13px;
 	margin: 0;
 	padding: 0;
 	padding-block: 22px 19px;
@@ -34,8 +34,8 @@
 
 .goals__radio {
 	display: block;
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	border: 1px solid #CDCDCD;
 	border-radius: 50%;
 	position: relative;
@@ -44,10 +44,10 @@
 		&::before {
 			content: "";
 			position: absolute;
-			top: calc(50% - 9px);
-			left: calc(50% - 9px);
-			width: 18px;
-			height: 18px;
+			top: calc(50% - 6px);
+			left: calc(50% - 6px);
+			width: 13px;
+			height: 13px;
 			background-color: $accent;
 			border-radius: 50%;
 		}

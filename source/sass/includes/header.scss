@@ -22,6 +22,8 @@
 
 
 .header__toggle {
+	display: flex;
+
 	background: none;
 	border: none;
 	margin: 0;
@@ -55,11 +57,20 @@
 	}
 }
 
+.header__logo {
+	&:is(:hover, :focus, :focus-visible){
+		opacity: 0.8;
+	};
+	&:is(:active){
+		opacity: 0.6;
+	};
+};
+
 @media (width < $tablet-width) {
 	.header__logo {
 		margin-left: var(--side-offset);
 		padding-block: 11px 17px;
-	}
+ 	}
 
 	.header__list {
 		display: grid;
@@ -105,11 +116,11 @@
 
 	.header__list {
 		display: flex;
-		gap: 32px;
+		gap: 36px;
 	}
 
 	.header__link {
-		padding-block: 18px 5px;
+		padding-block: 18px 8px;
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 1.33;   }

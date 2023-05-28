@@ -13,7 +13,7 @@
 
 		&::before {
 			position: absolute;
-			top: 0;
+			top: 4px;
 			left: calc(var(--exposure) - 2px);
 			content: "";
 			width: 4px;
@@ -22,10 +22,15 @@
 			border-radius: 2px;
 			z-index: 1;
 		}
-
-
-		&:is(:hover, :focus-within) {
-			--border-c: var(--accent);
+		&:is(:hover, :focus, :focus-within) {
+			&::before {
+				background-color: $accent;
+			}
+		}
+		&:is(:active) {
+			&::before {
+				opacity: 0.6;
+			}
 		}
 }
 
@@ -50,11 +55,11 @@
 
 .comparison__button {
 	$border-w: 2px;
-	$size: 40px - $border-w * 2;
+	$size: 40px;
 
 	position: absolute;
-	top: calc(50% - $size / 2);
-	left: calc(50% - $size / 2);
+	top: calc(50% - 16px);
+	left: calc(50% - 20px);
 	background-color: #ffffff;
 	width: $size;
 	height: $size;
@@ -67,10 +72,19 @@
 	&::after {
 		content: "";
 		background-color: var(--border-c);
-		width: calc(24px / $size * 100%);
-		height: calc(18px / $size * 100%);
+		width: 100%;
+		height: 100%;
+		// width: calc(24px / $size * 100%);
+		// height: calc(18px / $size * 100%);
 		mask-image: url('../img/intro.svg#slider');
 
+	}
+
+	&:is(:hover, :focus, :focus-within) {
+		--border-c: var(--accent);
+	}
+	&:active {
+		opacity: 0.6;
 	}
 }
 

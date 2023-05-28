@@ -13,8 +13,15 @@
 .footer__logo {
 	text-decoration: none;
 	justify-self: center;
-	color: #111111;
+	color: hsl(0, 0%, 7%);
 	display: block;
+
+	&:is(:hover, :focus, :focus-visible){
+		color: hsl(0, 0%, 24%);
+	}
+	&:is(:active) {
+		color: hsl(0, 0%, 42%);
+	}
 }
 
 .footer__socials {
@@ -29,7 +36,7 @@
 	border-width: 1px;
 	border-left: none;
 	border-right: none;
-	padding-block: 20px;
+	padding-block: 20px 15px;
 
 };
 
