@@ -1,58 +1,40 @@
 @use "variables" as *;
 
 .line-section {
-    margin: 0;
-    padding: 0;
-    border-width: 2px 0 0;
-    border-style: solid;
-    border-color: var(--accent);
-    position: relative;
-}
+	margin: 0;
+	padding: 0 var(--side-offset);
+	border-width: 2px 0 0;
+	border-style: solid;
+	border-color: var(--accent);
 
-.line-section__wrapper {
-    padding-inline: var(--side-offset);
+	--title-air: var(--side-offset);
+
+	margin-top: 36px;
 }
 
 .line-section__title {
-    padding-inline: var(--side-offset) 14px;
-    margin-bottom: 35px;
-    background-color: var(--back);
-
-    &--static {
-        margin: 0;
-        position: absolute;
-        top: 0;
-        translate: 0 -0.6em;
-        
-    }
+	padding-inline: var(--title-air);
+	background-color: var(--back);
+	width: fit-content;
+	margin-block: -0.6em 34px;
+	margin-inline-start:  calc(0px - var(--title-air))
 }
 
 @media (width >= $tablet-width) {
-    .line-section__title {
-        margin-left: var(--side-offset);
-        padding-inline: 40px;
+	.line-section {
+		--title-air: 40px;
+	}
 
-        br {
-            display: none;
-        }
-    }
-
-    .line-section__wrapper--form {
-        padding-inline: calc(var(--side-offset) + 40px);
-    }
-    
-
+	.line-section__title {
+		br {
+			display: none;
+		}
+	}
 }
 
-
-@media (width >= $desktop-width) {
-    .line-section__title {
-        margin-left: calc(var(--side-offset) - 40px);
-        padding-inline: 40px;
-    }
-
-    .line-section__wrapper--form {
-        padding-inline: var(--side-offset);
-    }
-    
+@media ( $tablet-width <= width < $desktop-width) {
+	.line-section--form {
+		padding-inline: calc( var(--side-offset) + var(--title-air));
+		
+	}
 }

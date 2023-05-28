@@ -1,0 +1,121 @@
+@use "./variables.scss" as *;
+
+.comparison {
+		position: relative;
+
+		--exposure: 50%;
+		--border-c: hsl(0deg 0% 40%);
+
+		display: grid;
+		place-items: center;
+		margin-inline: auto;
+		width: fit-content;
+
+		&::before {
+			position: absolute;
+			top: 4px;
+			left: calc(var(--exposure) - 2px);
+			content: "";
+			width: 4px;
+			height: 100%;
+			background-color: var(--border-c);
+			border-radius: 2px;
+			z-index: 1;
+		}
+
+		&:is(:hover, :focus, :focus-within) {
+			&::before {
+				background-color: $accent;
+			}
+		}
+
+		&:is(:active) {
+			&::before {
+				opacity: 0.6;
+			}
+		}
+}
+
+.comparison__before, .comparison__after  {
+		display: flex;
+	}
+
+.comparison__before .comparison__image {
+	clip-path: polygon(0 0, var(--exposure, 50%) 0, var(--exposure, 50%) 100%, 0% 100%);
+}
+
+.comparison__after .comparison__image {
+	clip-path: polygon(100% 0, var(--exposure, 50%) 0, var(--exposure, 50%) 100%, 100% 100%);
+}
+
+
+.comparison__after {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+.comparison__button {
+	$border-w: 2px;
+	$size: 40px;
+
+	position: absolute;
+	top: calc(50% - 16px);
+	left: calc(50% - 20px);
+	background-color: #ffffff;
+	width: $size;
+	height: $size;
+	z-index: 3;
+	border: 2px solid var(--border-c);
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+
+	&::after {
+		content: "";
+		background-color: var(--border-c);
+		width: 100%;
+		height: 100%;
+		mask-image: url('../img/intro.svg#slider');
+
+	}
+
+	&:is(:hover, :focus, :focus-within) {
+		--border-c: var(--accent);
+	}
+
+	&:active {
+		opacity: 0.6;
+	}
+}
+
+@media (width >= $tablet-width) {
+	.comparison {
+		margin-inline: auto;
+
+		&::before {
+			top: 0;
+			height: 89%;
+		}
+	}
+
+	.comparison__button {
+		top: calc(44% - 16px);
+	}
+}
+
+@media (width >= $desktop-width) {
+	.comparison {
+		margin-left: 50px;
+		margin-right: 0;
+
+		&::before {
+			top: 0;
+			height: 98%;
+		}
+	}
+
+	.comparison__button {
+		top: calc(48% - 13px);
+	}
+}

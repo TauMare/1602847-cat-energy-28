@@ -6,81 +6,17 @@ block variables
 		currentPage = 'form.html'
 
 block main
-	//- p test
-	section.form
+	section.form-section
 		h1._title.page__title Подбор программы
 		p._subtitle Заполните анкету, и мы подберем <br> программу питания для вашего кота
-		form.main(action="https://echo.htmlacademy.ru/courses" method="post")
-		form.main(action="https://echo.htmlacademy.ru/courses" method="post")
-			fieldset._personal
-				legend.page__hidden Введите данные о Вашем котике.
-				label.input Имя:*
-					input._field(type="text" name="name" placeholder="Барсик" value="Барсик" required)
+		form.form(action="https://echo.htmlacademy.ru/courses" method="post")
+			._section-wrapper
+				include includes/form/personal
+				include includes/form/goals
+			include includes/form/contacts
+			include includes/form/extra
+			include includes/form/additional
+			div._footer
+				button._button.button(type="submit") отправить заявку
+				p._required * — Обязательные поля
 
-				label.input Вес (кг):*
-					input._field(type="number" name="weight" placeholder="Вес числом" value=7 required)
-				
-				label.input Возраст (лет):
-					input._field(type="number" name="age" placeholder="Вес числом" value=7 required)
-
-			fieldset.goals
-				legend.page__hidden Выберите цель для Вашего котика.
-
-				label._choose.-radio
-					input._input.-radio(type="radio" name="goal" id="loss" value="loss" checked)
-					span._radio
-					span._label Похудение
-				label._choose.-radio
-					input._input.-radio(type="radio" name="goal" id="gain" value="gain")
-					span._radio
-					span._label Набор массы
-				label._choose.-radio
-					input._input.-radio(type="radio" name="goal" id="none" value="none" disabled checked)
-					span._radio
-					span._label Не знаю (Нужен ваш совет)
-			fieldset.line-section._contacts 
-				legend._title.page__subtitle Контактные данные<br> (владельца кота)
-				._wrapper.-form
-					label.input E-mail:*
-						input._field(type="email" name="email" placeholder="кuklachev@gmail.com" value="кuklachev@gmail.com" required)
-						span._icon
-
-					label.input Телефон:*
-						input._field(type="tel" name="tel" placeholder="8 (960) 900-60-90" required)
-						span._icon
-		
-			fieldset.line-section._comment
-				legend._title.page__subtitle 
-					label(for="comment") Комментарий
-				.about._wrapper.-form
-					textarea._input(name="comment" placeholder="Расскажите обо всех повадках кота." id="comment" cols="30" rows="10")
-			fieldset.line-section._additionals
-				legend._title.page__subtitle Дополнительно
-				.additionals._wrapper.-form
-					label._choose.-checkbox
-						input._input.-checkbox(type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked)
-						span._checkbox 
-							svg._checkbox-icon(width=26 height=26 aria-hidden="true" fill="currentColor")
-								use(href=`img/form.svg#tick`)
-						span._label сахарозаменитель
-					label._choose.-checkbox
-						input._input.-checkbox(type="checkbox" name="milk" id="milk" value="milk")
-						span._checkbox 
-							svg._checkbox-icon(width=26 height=26 aria-hidden="true" fill="currentColor")
-								use(href=`img/form.svg#tick`)
-						span._label молоко
-					label._choose.-checkbox
-						input._input.-checkbox(type="checkbox" name="water" id="water" value="water")
-						span._checkbox 
-							svg._checkbox-icon(width=26 height=26 aria-hidden="true" fill="currentColor")
-								use(href=`img/form.svg#tick`)
-						span._label питьевая вода
-					label._choose.-checkbox
-						input._input.-checkbox(type="checkbox" name="vitamins" id="vitamins" value="vitamins")
-						span._checkbox 
-							svg._checkbox-icon(width=26 height=26 aria-hidden="true" fill="currentColor")
-								use(href=`img/form.svg#tick`)
-						span._label витамины
-			button._button.button(type="submit") отправить заявку
-			p._required * — Обязательные поля
-				

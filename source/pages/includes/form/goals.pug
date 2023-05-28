@@ -1,0 +1,8 @@
+fieldset.goals
+	legend.page__hidden Выберите цель для Вашего котика.
+	each radio in goals
+		label.goals__choose
+			input.goals__input.page__hidden(type="radio" name="goal" id=`${radio.name}` value=`${radio.name}` disabled=radio.disabled checked=radio.checked)
+			span.goals__radio
+			span.goals__label=radio.label
+

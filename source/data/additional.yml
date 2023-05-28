@@ -1,0 +1,15 @@
+- name: sweetener
+  label: сахарозаменитель
+  checked: true
+
+- name: milk
+  label: питьевая вода
+  checked: false
+
+- name: water
+  label: молоко
+  checked: false
+
+- name: vitamins
+  label: витамины
+  checked: false

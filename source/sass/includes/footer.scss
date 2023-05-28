@@ -1,98 +1,115 @@
 @use "./variables.scss" as *;
-@use "./variables.scss" as *;
 
 .footer {
-    display: grid;
-    padding-inline: var(--side-offset);
-    background-color: $white;
-    padding-block: 40px;
-    gap: 20px;
-    align-items: start;
-    align-content: start;
+	display: grid;
+	padding-inline: var(--side-offset);
+	background-color: $white;
+	padding-block: 40px;
+	gap: 20px;
+	align-items: start;
+	align-content: start;
 }
 
 .footer__logo {
-    text-decoration: none;
-    justify-self: center;
-    color: $light-black;
-    display: block;
+	text-decoration: none;
+	justify-self: center;
+	color: hsl(0deg 0% 7%);
+	display: block;
+
+	&:is(:hover, :focus, :focus-visible){
+		color: hsl(0deg 0% 24%);
+	}
+
+	&:is(:active) {
+		color: hsl(0deg 0% 42%);
+	}
 }
 
 .footer__socials {
-    display: flex;
-    list-style-type: none;
-    gap: 26px;
-    padding-left: 0;
-    justify-content: center;
-    position: relative;
-    border-style: solid;
-    border-color: #D9D9D9;
-    border-left: none;
-    border-right: none;
-    padding-block: 20px;
+	display: flex;
+	list-style-type: none;
+	gap: 26px;
+	padding-left: 0;
+	justify-content: center;
+	position: relative;
+	border-style: solid;
+	border-color: #D9D9D9;
+	border-width: 1px;
+	border-left: none;
+	border-right: none;
+	padding-block: 20px 15px;
 
 };
 
 .footer__copy {
-    font-family: $font-additional;
-    text-decoration: none;
-    line-height: 19px;
-    color: $light-black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+	font-family: $font-additional;
+	text-decoration: none;
+	line-height: 19px;
+	color: $light-black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
 
-    &:is(:hover, :focus-visible) {
-        --color: #{$accent};
-    }
-        
-    &:active {
-        --color: #{rgba($accent, 30%)};
+	&:is(:hover, :focus-visible) {
+		--color: #{$accent};
+	}
 
-        color: hsl(0deg 0% 27% / 30%);
-    };
+	&:active {
+		--color: #{rgba($accent, 30%)};
+
+		color: hsl(0deg 0% 27% / 30%);
+	};
 }
 
 .footer__copy-logo {
-    color: var(--color, hsl(0deg 0% 40%));
+	color: var(--color, hsl(0deg 0% 40%));
 }
 
 
 
 .footer__social {
-    color: inherit;
-    transition: color 0.1s ease-in-out;
+	color: inherit;
+	transition: color 0.1s ease-in-out;
 
-    &:is(:hover, :focus-visible) {
-        color: $accent;
-    }
+	&:is(:hover, :focus-visible) {
+		color: $accent;
+	}
 
-    &:active {
-        color: $accent;
-        opacity: 0.3;
-    }
+	&:active {
+		color: $accent;
+		opacity: 0.3;
+	}
 }
 
 
 @media (width >= $tablet-width) {
-    .footer {
-        grid-auto-flow: column;
-        align-content: center;
-        padding-block: 60px;
-    }
+	.footer {
+		grid-auto-flow: column;
+		align-content: center;
+		padding-block: 60px;
+	}
 
-    .footer__logo {
-        justify-self: start;
-    }
+	.footer__logo {
+		justify-self: start;
+		width: 144px;
+		height: 27px;
+	}
 
-    .footer__socials {
-        border: none;
-        padding-block: 0;
-    }
+	.footer__socials {
+		border: none;
+		padding-block: 4px;
+		padding-left: 26px;
+	}
 
-    .footer__copy {
-        justify-content: end;
-        gap: 28px;
-    }
+	.footer__copy {
+		justify-content: end;
+		gap: 28px;
+	}
+}
+
+@media (width >= $desktop-width) {
+	.footer {
+		padding-top: 70px;
+	}
 }

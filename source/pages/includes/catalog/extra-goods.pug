@@ -1,0 +1,17 @@
+section.line-section.extra-goods
+	h2._title.-static.page__subtitle.extra-goods__title Дополнительные товары
+	table.extra-good
+		thead.page__hidden
+			tr
+				- const TABLE_HEADLINES = ["Название", "Количество", "Цена", "Действие"]
+				each headline in TABLE_HEADLINES
+					th=headline
+		tbody._table
+			each additional in additionals
+				tr.extra-good__item
+					td.extra-good__name=additional.title
+					td.extra-good__amount=additional.amount
+					td.extra-good__price=additional.price + ' '
+						abbr(title="Рублей") Р
+					td.extra-good__cta
+						button.button.extra-good__button Заказать

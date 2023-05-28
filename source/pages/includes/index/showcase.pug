@@ -1,0 +1,18 @@
+-const tableData = { 'Снижение веса': '5 кг', 'Затрачено времени': '60 дней' };
+
+
+section.showcase
+	h2._title Живой пример
+	p._subtitle Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+	dl._info
+		each value, key in tableData
+			div.key-card
+				dt._key=key
+				dd._value=value
+		div._summary
+			dt._key Затраты на питание:
+			dd._value 15 000 РУБ.
+	.comparison._slider
+		+adaptivePic({className: 'comparison__image', loading: 'eager', alt: 'Ваш кот до наших программ.', src: './img/slider/before', ext: 'png', sizes: [[560, 512], [560, 512], [280, 256]], picClass: 'comparison__before', medias: ['(min-width: 1280px)', '(min-width: 700px)']})
+		+adaptivePic({className: 'comparison__image', loading: 'eager', alt: 'Ваш кот после наших программ.', src: './img/slider/after', ext: 'png', sizes: [[560, 512], [560, 512], [280, 256]], picClass: 'comparison__after', medias: ['(min-width: 1280px)', '(min-width: 700px)']})
+		button._button(type='button' aria-label='Передвиньте ползунок')

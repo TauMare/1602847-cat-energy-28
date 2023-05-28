@@ -1,0 +1,11 @@
+div( role="group" aria-labelledby="additional-title").line-section.-form.additional
+	h2#additional-title._title.page__subtitle.additional__title Дополнительно
+
+	.additional__container
+		each input in additional
+			label.checkbox
+				input._native.page__hidden(type="checkbox" name=`${input.name}` id=`${input.name}` value=`${input.name}` checked=input.checked)
+				span._custom
+					svg._tick(width=30 height=20 aria-hidden="true" fill="currentColor")
+						use(href=`img/form.svg#tick`)
+				span._label=input.label

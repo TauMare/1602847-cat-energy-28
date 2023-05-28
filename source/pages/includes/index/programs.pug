@@ -1,0 +1,11 @@
+section.programs
+	h2.page__hidden Наши программы
+
+	each program in programs
+		article.program
+			._title-wrapper
+				h3._title=program.title
+				span._icon(class=`program__icon-${program.icon}`)
+			p._subtitle=program.subtitle
+
+			a._link(href=`/catalog/${program.link}`)=`Каталог ${program.link}`

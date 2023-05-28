@@ -1,8 +1,7 @@
-.address(class=!isMainPage && 'address--secondary')
+.address(class=!isMainPage && 'address--secondary' || isMainPage && 'address--main')
 	address._wrapper
 		strong._title Приглашаем  #[br]к сотрудничеству дилеров!
 
-		a._link(href="geo:59.938731,30.323062") ул. Большая
 		a._link(href="geo:59.938731,30.323062") ул. Большая
 			br
 			| Конюшенная, д. 19/8
@@ -15,4 +14,4 @@
 		+adaptivePic({className: '', alt: 'Мы на карте.', src: 'img/address/location', ext: 'png', sizes: [[1440, 400], [768, 400], [320, 362]], picClass: 'address__map', medias: ['(min-width: 1280px)', '(min-width: 700px)']})
 
 
-	
+

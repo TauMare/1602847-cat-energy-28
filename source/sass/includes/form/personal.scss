@@ -1,0 +1,43 @@
+@use "./variables.scss" as *;
+
+.personal {
+	border: none;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 24px;
+	padding-inline: var(--side-offset);
+	border-bottom: 1px solid #D9D9D9;
+}
+
+.personal__field {
+	margin-left: 5px;
+}
+
+.personal__input {
+	padding-right: 5px;
+}
+
+
+
+@media (width >= $tablet-width) {
+	.personal {
+		margin-inline: 39px;
+		border-bottom: none;
+	}
+
+	.personal__input {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+}
+
+@media (width >=$desktop-width) {
+	.personal {
+		padding-right: 37px;
+		margin-right: 0;
+	}
+}

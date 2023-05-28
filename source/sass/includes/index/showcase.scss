@@ -1,0 +1,135 @@
+@use "./variables.scss" as *;
+
+.showcase {
+	padding-inline: var(--side-offset);
+	background-color: #EAEAEA;
+	padding-block: 29px 40px;
+};
+
+.showcase__title {
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.showcase__subtitle {
+	font-family: $font-additional;
+	font-size: 14px;
+	line-height: 18px;
+	color: $light-black;
+	margin: 0;
+	margin-block: 40px 20px;
+}
+
+.showcase__info {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 36px 33px;
+};
+
+
+.showcase__summary {
+	grid-column: 1/-1;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.showcase__value {
+	margin: 0;
+	padding-left: 3px;
+}
+
+@media (width >= $tablet-width) {
+	.showcase {
+		border-top: 1px solid #E6E6E6;
+		background-color: #FFFFFF;
+		background-image: linear-gradient(180deg, #FFFFFF 616px, #EAEAEA 0);
+		padding-top: 40px;
+	}
+
+	.showcase__title {
+		font-size: 60px;
+		line-height: 60px;
+		margin: 0;
+
+	}
+
+	.showcase__subtitle {
+		font-size: 16px;
+		line-height: 24px;
+		margin-block: 64px 53px;
+	}
+
+	.showcase__info {
+		display: flex;
+		gap: 42px;
+		margin: 0;
+	};
+
+	.showcase__summary {
+		margin-left: auto;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: space-evenly;
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	.showcase__slider {
+		margin-top: 106px;
+		padding-bottom: 59px;
+	}
+}
+
+@media (width >=$desktop-width) {
+	.showcase {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 60px 1fr min-content;
+		border: none;
+		padding-top: 21px;
+		background-image: linear-gradient(180deg, #FFFFFF 158px, #EAEAEA 0);
+		padding-bottom: 77px;
+	}
+
+	.showcase__title {
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+
+	.showcase__subtitle {
+		grid-column: 1/2;
+		grid-row: 2/3;
+		margin-top: 147px;
+		max-width: 71%;
+	}
+
+	.showcase__info {
+		grid-column: 1/2;
+		grid-row: 3/4;
+		align-self: flex-start;
+		flex-wrap: wrap;
+		padding-top: 12px;
+	}
+
+	.showcase__slider {
+		grid-column: 2/3;
+		grid-row: 1/-1;
+		padding-bottom: 0;
+		margin-top: 0;
+	}
+
+	.showcase__summary {
+		width: 100%;
+		flex-direction: row;
+		justify-content: flex-start;
+		gap: 62px;
+		margin-top: 20px;
+	}
+}
