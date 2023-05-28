@@ -131,7 +131,7 @@
 
 	.program {
 		margin-top: 0;
-		padding: 75px 62px 58px 53px;
+		padding: 55px 62px 54px 52px;
 	}
 
 	.program__icon-stay {
@@ -140,7 +140,7 @@
 		position: absolute;
 		margin-right: 0;
 		right: -1px;
-		top: 17px;
+		top: 35px;
 
 		&::after {
 			content: "";
@@ -159,7 +159,7 @@
 		position: absolute;
 		margin-right: 0;
 		right: -1px;
-		top: 12px;
+		top: 33px;
 
 		&::after {
 			content: "";
@@ -178,6 +178,7 @@
 		justify-content: flex-end;
 		align-items: center;
 		position: relative;
+		padding-left: 0;
 	}
 
 	.program__title {
@@ -191,7 +192,7 @@
 		font-size: 16px;
 		line-height: 24px;
 		padding: 0;
-		margin-block: 24px 0;
+		margin-block: 0;
 	}
 
 	.program__link{
@@ -214,9 +215,7 @@
 
 	.program {
 		margin: 0;
-		// padding: 40px;
-		// padding-bottom: 20px;
-		// max-width: 570px;
+		padding-top: 75px;
 	}
 
 	.program__title {
@@ -235,6 +234,7 @@
 		top: -28px;
 		width: 100px;
 		height: 100px;
+
 		&::after {
 			left: calc(50% - 70px / 2);
 			top: calc(50% - 55.5px);
@@ -248,6 +248,7 @@
 		top: -28px;
 		width: 100px;
 		height: 100px;
+
 		&::after {
 			left: calc(50% - 136px / 2);
 			top: calc(50% - 56px / 2);

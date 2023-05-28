@@ -54,7 +54,6 @@
 		min-height: 200px;
 		display: flex;
 		justify-content: center;
-
 		margin-bottom: 77px;
 
 		&::before {
@@ -93,14 +92,28 @@
 
 @media (width >=$desktop-width) {
 	.promo {
+		max-width: 245px;
+		min-height: 289px;
+		position: absolute;
 		flex-direction: column;
 		height: auto;
 		margin: 0;
 		padding: 0;
+		right: calc(0% + var(--side-offset));
+		top: 97px;
+		padding-top: 24px;
 	}
 
 	.promo__icon {
 		margin: 0;
 		padding: 0;
+		margin-bottom: 48px;
+	}
+
+	.promo__title {
+		padding: 0;
+		text-align: center;
+		margin-bottom: 5px;
+		width: 75%;
 	}
 }

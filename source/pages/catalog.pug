@@ -25,5 +25,7 @@ block main
 						dd._properties-subtitle #{product.price} ₽
 					a(href=`/form.html`)._button.button заказать
 			include includes/catalog/above
-	include includes/catalog/extra-goods
-	include includes/catalog/promo
+	section.extra-wrapper 
+		h3.page__hidden Дополнительные товары и промоакция.
+		include includes/catalog/extra-goods
+		include includes/catalog/promo

@@ -14,8 +14,6 @@
 
 .personal__field {
 	margin-left: 5px;
-
-	// width: 98%;
 }
 
 .personal__input {
@@ -38,5 +36,8 @@
 }
 
 @media (width >=$desktop-width) {
-
+	.personal {
+		padding-right: 37px;
+		margin-right: 0;
+	}
 }

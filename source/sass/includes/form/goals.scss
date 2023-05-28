@@ -118,6 +118,13 @@
 	}
 }
 
-@media (width >=$desktop-width) {
-
+@media (width >= $desktop-width) {
+	.goals {
+		margin-left: 0;
+		margin-top: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+		width: 88%;
+		height: 89%;
+	}
 }

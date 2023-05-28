@@ -1,23 +1,7 @@
 @use "./variables.scss" as *;
 
-.extra {
-	// border: none;
-	// padding-inline: var(--side-offset);
-}
-
 .extra__title {
 	margin-bottom: 41px;
-}
-
-.extra__legend {
-	// display: flex;
-	// flex-direction: column;
-	// gap: 14px;
-
-	// margin: 0;
-	// padding: 0;
-
-	// width: 100%;
 }
 
 .extra__label {
@@ -54,17 +38,15 @@
 	.extra {
 		margin-top: 83px;
 	}
+
 	.extra__title {
 		margin-bottom: 77px;
 	}
+
 	.extra__input {
 		font-size: 20px;
 		line-height: 30px;
-		padding: 10px 19px 10px 19px;
+		padding: 10px 19px;
 		max-height: 174px;
 	}
-}
-
-@media (width >=$desktop-width) {
-
 }

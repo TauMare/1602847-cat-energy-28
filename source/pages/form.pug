@@ -10,8 +10,9 @@ block main
 		h1._title.page__title Подбор программы
 		p._subtitle Заполните анкету, и мы подберем <br> программу питания для вашего кота
 		form.form(action="https://echo.htmlacademy.ru/courses" method="post")
-			include includes/form/personal
-			include includes/form/goals
+			._section-wrapper
+				include includes/form/personal
+				include includes/form/goals
 			include includes/form/contacts
 			include includes/form/extra
 			include includes/form/additional

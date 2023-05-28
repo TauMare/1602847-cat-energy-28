@@ -9,11 +9,9 @@ section.showcase
 			div.key-card
 				dt._key=key
 				dd._value=value
-				//- доделать перенос строки в случае слева
 		div._summary
 			dt._key Затраты на питание:
 			dd._value 15 000 РУБ.
-	//- ._image Тут доработаем потом
 	.comparison._slider
 		+adaptivePic({className: 'comparison__image', loading: 'eager', alt: 'Ваш кот до наших программ.', src: './img/slider/before', ext: 'png', sizes: [[560, 512], [560, 512], [280, 256]], picClass: 'comparison__before', medias: ['(min-width: 1280px)', '(min-width: 700px)']})
 		+adaptivePic({className: 'comparison__image', loading: 'eager', alt: 'Ваш кот после наших программ.', src: './img/slider/after', ext: 'png', sizes: [[560, 512], [560, 512], [280, 256]], picClass: 'comparison__after', medias: ['(min-width: 1280px)', '(min-width: 700px)']})

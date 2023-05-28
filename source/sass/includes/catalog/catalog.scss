@@ -4,11 +4,7 @@
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-
-	// padding-inline: var(--side-offset);
 }
-
-
 
 .catalog__title {
 	font-weight: 400;
@@ -19,10 +15,6 @@
 	border-bottom: 1px solid #EBEBEB;
 	padding-inline: var(--side-offset);
 }
-
-
-
-
 
 
 @media (width >= $tablet-width) {
@@ -47,10 +39,11 @@
 
 }
 
-@media (width >=$desktop-width) {
+@media (width >= $desktop-width) {
 	.catalog {
 		margin-bottom: 95px;
 	}
+
 	.catalog__title {
 		padding-top: 73px
 	}

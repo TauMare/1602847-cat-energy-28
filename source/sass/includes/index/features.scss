@@ -55,7 +55,7 @@
 	.features__title {
 		font-size: 60px;
 		line-height: 60px;
-		margin-block: 41px 40px;
+		margin-block: 45px 40px;
 	}
 
 	.features__list {
@@ -109,7 +109,7 @@
 
 @media (width >= $desktop-width) {
 	.features__title {
-		margin-block: 72px 40px;
+		margin-block: 76px 40px;
 	}
 
 	.features__list {
@@ -120,14 +120,4 @@
 	.features__text {
 		width: 100%;
 	}
-
-	// .features__list {
-		
-	// 	gap: 20px;
-	// }
-
-	// .features__feature {
-	// 	min-width: 230px;
-	// }
-
 }
