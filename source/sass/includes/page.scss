@@ -69,4 +69,8 @@
 	.page {
 		--side-offset: calc(50% - #{$container-width} / 2);
 	}
+
+	.page__main {
+		margin-bottom: -97px;
+	}
 }

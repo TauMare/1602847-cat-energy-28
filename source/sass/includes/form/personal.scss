@@ -14,6 +14,7 @@
 
 .personal__field {
 	margin-left: 5px;
+
 	// width: 98%;
 }
 
@@ -24,6 +25,15 @@
 
 
 @media (width >= $tablet-width) {
+	.personal {
+		margin-inline: 39px;
+		border-bottom: none;
+	}
+
+	.personal__input {
+		font-size: 20px;
+		line-height: 30px;
+	}
 
 }
 

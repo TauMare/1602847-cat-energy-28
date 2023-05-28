@@ -96,7 +96,6 @@ $mob-bg-h: 302px;
 		font-size: 20px;
 		line-height: 20px;
 		min-height: 54px;
-
 		margin-left: 3px;
     	margin-top: 3px;
 	}
@@ -115,7 +114,7 @@ $mob-bg-h: 302px;
 	.intro {
 		padding-inline: calc(var(--side-offset) + 80px);
 		background-image: linear-gradient(to right, #ffffff 50%, $accent 50%);
-		padding-block: 100px;
+		padding-block: 100px 185px;
 		display: grid;
 		align-items: center;
 		align-content: center;
@@ -132,12 +131,20 @@ $mob-bg-h: 302px;
 		}
 	}
 
+	.intro__title {
+		margin-top: 123px;
+	}
+
 	.intro__pic {
-		right: calc(50% - 320px);
-		top: calc(50% - 210px);
+		right: calc(50% - 390px);
+		top: calc(50% - 206px);
 		z-index: -1;
 	}
 	
+	.intro__button {
+		margin-top: 2px;
+		margin-left: 0;
+	}
 	// .intro__title {
 	// 	max-width: 414px;
 	// }

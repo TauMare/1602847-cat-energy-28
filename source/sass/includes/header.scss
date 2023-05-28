@@ -23,7 +23,6 @@
 
 .header__toggle {
 	display: flex;
-
 	background: none;
 	border: none;
 	margin: 0;
@@ -61,6 +60,7 @@
 	&:is(:hover, :focus, :focus-visible){
 		opacity: 0.8;
 	};
+
 	&:is(:active){
 		opacity: 0.6;
 	};
@@ -141,5 +141,18 @@
 			--link-color: #{$white};
 			--accent: #{$white};
 		}
+	}
+
+	.header__list {
+		gap: 37px;
+	}
+
+	.header__link {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	.header__nav {
+		margin-top: -3px;
 	}
 }

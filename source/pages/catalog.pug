@@ -17,13 +17,10 @@ block main
 					h3._title
 						a._link(href=`/catalog/product-${index}`)=product.title + " " + product.weight + " г"
 					dl._properties
-						//- ._properties-line 
 						dt._properties-title Масса
 						dd._properties-subtitle #{product.weight} г
-						//- ._properties-line
 						dt._properties-title Вкус
 						dd._properties-subtitle=product.flavor
-						//- ._properties-line
 						dt._properties-title Цена
 						dd._properties-subtitle #{product.price} ₽
 					a(href=`/form.html`)._button.button заказать

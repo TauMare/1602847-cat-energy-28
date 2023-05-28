@@ -51,7 +51,18 @@
 }
 
 @media (width >= $tablet-width) {
-
+	.extra {
+		margin-top: 83px;
+	}
+	.extra__title {
+		margin-bottom: 77px;
+	}
+	.extra__input {
+		font-size: 20px;
+		line-height: 30px;
+		padding: 10px 19px 10px 19px;
+		max-height: 174px;
+	}
 }
 
 @media (width >=$desktop-width) {

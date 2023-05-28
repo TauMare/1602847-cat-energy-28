@@ -27,7 +27,7 @@
 
 @media (width >= $tablet-width) {
 	.catalog {
-		margin-bottom: 68px;
+		margin-bottom: 84px;
 	}
 
 	.catalog__title {
@@ -41,20 +41,23 @@
 		margin: 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		column-gap: 60px;
+		gap: 60px;
+		margin-inline: var(--side-offset);
 	}
 
-	
-
-	.catalog__additional-button {
-		height: 40px;
-	}
 }
 
 @media (width >=$desktop-width) {
+	.catalog {
+		margin-bottom: 95px;
+	}
+	.catalog__title {
+		padding-top: 73px
+	}
+
 	.catalog__products {
-		display: flex;
-		flex-wrap: wrap;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 80px;
 	}
 
 	.catalog__additional {

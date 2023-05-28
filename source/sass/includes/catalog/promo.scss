@@ -20,7 +20,7 @@
 		position: absolute;
 		inset: 0 0 auto;
 		width: 100%;
-		min-height: 290px;
+		min-height: 100%;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -36,7 +36,6 @@
 
 .promo__title {
 	margin: 0;
-
 	font-family: $font-additional;
 	line-height: 20px;
 	color: #FFFFFF;
@@ -46,18 +45,17 @@
 
 .promo__icon {
 	margin-top: 53px;
-	// top: -6px;
-    // position: relative;
-	// align-self: flex-end;
 }
 
 
 @media (width >= $tablet-width) {
 	.promo {
-		max-height: 200px;
-		margin: 0;
+		margin-inline: var(--side-offset);
+		min-height: 200px;
 		display: flex;
 		justify-content: center;
+
+		margin-bottom: 77px;
 
 		&::before {
 			content: "";
@@ -66,7 +64,7 @@
 			width: 100%;
 			height: 100%;
 			background-repeat: no-repeat;
-			background-position: center;
+			background-position: 100% 60%;
 			background-size: cover;
 			opacity: 0.15;
 			z-index: -1;
@@ -80,7 +78,8 @@
 		width: 80px;
 		height: 80px;
 		align-self: center;
-		margin-left: -30px;
+		margin-left: -45px;
+		margin-top: -6px;
 	}
 
 	.promo__title {

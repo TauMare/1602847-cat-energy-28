@@ -47,17 +47,47 @@
 }
 
 @media (width >= $tablet-width) {
-	.form__footer  {
-		grid-template-columns: 200px auto;
-		justify-items: start;
-		gap: 40px;
-		margin-inline: 40px;
+	.form-section {
+		margin-bottom: 66px;
 	}
 
+	.form__footer  {
+		grid-template-columns: 282px auto;
+		justify-items: start;
+		gap: 64px;
+		margin-inline: 40px;
+		margin-top: 12px;
+	}
+
+	.form__button {
+		width: 100%;
+		min-height: 52px;
+		font-size: 20px;
+		line-height: 0px;
+	}
+
+	.form__required {
+		margin: 0;
+		padding-block: 23px 27px;
+		font-size: 16px;
+		line-height: 16px;
+	}
+
+	.form-section__title {
+		margin-top: 65px;
+		margin-left: 39px;
+		margin-bottom: 53px;
+	}
+
+	.form-section__subtitle {
+		margin-bottom: 64px;
+		margin-left: 39px;
+		font-size: 20px;
+		line-height: 30px;
+	}
 }
 
 @media (width >=$desktop-width) {
-
 	.form__footer  {
 		grid-template-columns: 200px auto;
 		margin-inline: 0;

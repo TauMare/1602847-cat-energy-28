@@ -9,7 +9,6 @@
 .features__title {
 	margin: 0;
 	margin-block: 15px 40px;
-
 	font-weight: 400;
 	font-size: 36px;
 	line-height: 40px;
@@ -56,7 +55,6 @@
 	.features__title {
 		font-size: 60px;
 		line-height: 60px;
-
 		margin-block: 41px 40px;
 	}
 
@@ -86,7 +84,7 @@
 			color: #F2F2F2;
 			z-index: -1;
 			bottom: 0;
-			right: 20%;
+			left: 115px;
 		};
 	};
 
@@ -106,4 +104,30 @@
 		font-size: 16px;
 		line-height: 24px;
 	}
+}
+
+
+@media (width >= $desktop-width) {
+	.features__title {
+		margin-block: 72px 40px;
+	}
+
+	.features__list {
+		gap: 80px;
+		display: flex;
+	}
+
+	.features__text {
+		width: 100%;
+	}
+
+	// .features__list {
+		
+	// 	gap: 20px;
+	// }
+
+	// .features__feature {
+	// 	min-width: 230px;
+	// }
+
 }

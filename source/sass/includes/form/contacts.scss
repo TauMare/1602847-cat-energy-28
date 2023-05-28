@@ -2,6 +2,7 @@
 
 .contacts {
 	// padding: 14px 40px 14px 15px;
+	margin-top: 26px;
 }
 
 .contacts__title {
@@ -9,9 +10,9 @@
 	line-height: 26px;
 }
 
-.contacts__input {
-	padding: 14px 15px;
-}
+// .contacts__input {
+// 	padding: 14px 15px;
+// }
 
 .contacts__container {
 	font-size: 24px;
@@ -26,9 +27,32 @@
 // 	margin-bottom: 35px;
 // }
 
-// @media (width >= $tablet-width) {
-
-// }
+@media (width >= $tablet-width) {
+	.contacts {
+		margin-top: 96px;
+	}
+	
+	.contacts__title {
+		margin-top: -0.5em;
+		margin-bottom: 76px;
+		line-height: 26px;
+	}
+	
+	.contacts__label {
+		margin-top: 1px;
+		font-size: 20px;
+		line-height: 30px;
+		gap: 20px;
+	}
+	
+	.contacts__container {
+		font-size: 24px;
+		line-height: 26px;
+		display: flex;
+		flex-direction: column;
+		gap: 13px;
+	}
+}
 
 // @media (width >=$desktop-width) {
 

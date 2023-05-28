@@ -67,10 +67,10 @@
 		&::before {
 			content: "";
 			position: absolute;
-			top: calc(50% - 9px);
-			left: calc(50% - 9px);
-			width: 18px;
-			height: 18px;
+			top: calc(50% - 6px);
+			left: calc(50% - 6px);
+			width: 13px;
+			height: 13px;
 			background-color: $accent;
 			border-radius: 50%;
 		}
@@ -78,7 +78,44 @@
 }
 
 @media (width >= $tablet-width) {
+	.goals {
+		margin-top: 48px;
+		margin-inline: 71px 67px;
+		border: 1px solid #E7E7E7;
+		padding: 24px 27px;
+	}
 
+	.goals__radio {
+		width: 40px;
+		height: 40px;
+
+		.goals__input:checked + &{
+			&::before {
+				top: calc(50% - 9px);
+				left: calc(50% - 9px);
+				width: 18px;
+				height: 18px;
+			}
+		}
+
+		.goals__input:disabled:checked + &, .goals__input--disabled:checked + &{
+			&::before {
+				top: calc(50% - 9px);
+				left: calc(50% - 9px);
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+
+	.goals__label {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	.goals__choose {
+		gap: 20px;
+	}
 }
 
 @media (width >=$desktop-width) {
