@@ -12,7 +12,7 @@
 	line-height: 36px;
 	margin: 0;
 	padding-block: 27px 41px;
-	border-bottom: 1px solid #EBEBEB;
+	border-bottom: 1px solid #ebebeb;
 	padding-inline: var(--side-offset);
 }
 
@@ -36,7 +36,6 @@
 		gap: 60px;
 		margin-inline: var(--side-offset);
 	}
-
 }
 
 @media (width >= $desktop-width) {
@@ -45,7 +44,7 @@
 	}
 
 	.catalog__title {
-		padding-top: 73px
+		padding-top: 73px;
 	}
 
 	.catalog__products {

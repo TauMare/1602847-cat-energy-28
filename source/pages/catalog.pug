@@ -11,7 +11,7 @@ block main
 		div._products
 			each product, index in products
 				article.product
-					a.__pic-wrapper(href=`/catalog/product-${index}` tabindex=-1)
+					a.__pic-wrapper(href=`/catalog/product-${index}`)
 						+adaptivePic({className: 'product__img', loading: 'eager', alt: product.title, src: `./img/catalog/catalog-${index}`, ext: 'png', sizes: product.sizes, picClass: 'product__pic', medias: ['(min-width: 1220px)', '(min-width: 707px)'], suffixes: ['desk', 'tab'] })
 
 					h3._title

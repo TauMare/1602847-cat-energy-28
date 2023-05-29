@@ -51,7 +51,7 @@
 	overflow: hidden;
 }
 
-@media (width >=$tablet-width) {
+@media (width >= $tablet-width) {
 	.page {
 		--side-offset: 30px;
 	}
@@ -65,7 +65,7 @@
 	}
 }
 
-@media (width >=$desktop-width) {
+@media (width >= $desktop-width) {
 	.page {
 		--side-offset: calc(50% - #{$container-width} / 2);
 	}

@@ -1,9 +1,9 @@
 @use "./variables.scss" as *;
 
 .additional__container {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
 	margin-bottom: 34px;
 }
 
@@ -23,10 +23,14 @@
 	}
 }
 
-@media (width >=$desktop-width) {
+@media (width >= $desktop-width) {
 	.additional__container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		gap: 80px;
+	}
+
+	.additional {
+		margin-top: 86px;
 	}
 }

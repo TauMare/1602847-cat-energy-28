@@ -29,12 +29,13 @@
 	}
 
 	&:focus {
-		--border-c:  hsl(0deg 0% 27%);
+		--border-c: hsl(0deg 0% 27%);
 		--border-w: 2px;
 	}
 
-	&[aria-invalid="true"], &--error {
-		--border-c:  #{$error};
+	&[aria-invalid="true"],
+	&--error {
+		--border-c: #{$error};
 		--border-w: 2px;
 
 		& + .input__icon {
