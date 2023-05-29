@@ -176,21 +176,21 @@
 	}
 
 	.extra-good__table {
-		gap: 15px;
+		gap: 0;
 	}
 
 	.extra-good__item {
 		padding-left: 0;
-		padding-block: 0 17px;
+		padding-block: 13px 17px;
 		padding-right: 40px;
 
 		&:first-child {
 			border-top: 1px solid #CDCDCD;
-			padding-top: 15px;
+			padding-top: 12px;
+			padding-bottom: 15px;
 		}
 
 		&:last-child {
-			padding-bottom: 17px;
 			border-bottom: 1px solid #CDCDCD;
 		}
 
