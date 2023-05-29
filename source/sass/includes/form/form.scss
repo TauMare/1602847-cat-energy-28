@@ -51,7 +51,7 @@
 		margin-bottom: 66px;
 	}
 
-	.form__footer  {
+	.form__footer {
 		grid-template-columns: 282px auto;
 		justify-items: start;
 		gap: 64px;
@@ -87,15 +87,15 @@
 	}
 }
 
-@media (width >=$desktop-width) {
+@media (width >= $desktop-width) {
 	.form-section__title {
-		margin-inline: calc(var(--side-offset));
+		margin-left: calc(var(--side-offset));
 		padding-top: 8px;
 		padding-left: 0;
 	}
 
 	.form-section__subtitle {
-		margin-inline: calc(var(--side-offset));
+		margin-left: calc(var(--side-offset));
 		padding-top: 4px;
 		padding-left: 0;
 	}
@@ -108,7 +108,7 @@
 		margin-bottom: 40px;
 	}
 
-	.form__footer  {
+	.form__footer {
 		margin-top: 22px;
 		grid-template-columns: auto auto;
 		margin-inline: 0;
@@ -123,5 +123,4 @@
 	.form__required {
 		margin-left: 45px;
 	}
-
 }

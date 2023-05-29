@@ -15,12 +15,11 @@
 	line-height: 12px;
 	color: $light-black;
 	position: absolute;
-	background-color: #EAEAEA;
-	inset: calc(100% - 0.8em)0 auto;
+	background-color: #eaeaea;
+	inset: calc(100% - 0.8em) 0 auto;
 	text-transform: lowercase;
 	padding-inline: 5px;
 	margin: 3px 28px;
-	
 }
 
 .key-card__value {
@@ -31,13 +30,13 @@
 }
 
 @media (width >= $tablet-width) {
-    .key-card {
+	.key-card {
 		width: 23%;
 		padding: 16px;
 	}
 
 	.key-card__key {
-		background-color: #FFFFFF;
+		background-color: #ffffff;
 		font-size: 14px;
 		line-height: 14px;
 		max-width: none;
@@ -50,12 +49,12 @@
 	}
 }
 
-@media (width >=$desktop-width) {
-    .key-card {
+@media (width >= $desktop-width) {
+	.key-card {
 		width: 27%;
 	}
 
 	.key-card__key {
-		background-color: #EAEAEA;
+		background-color: #eaeaea;
 	}
 }

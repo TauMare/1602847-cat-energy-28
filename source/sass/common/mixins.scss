@@ -1,4 +1,4 @@
-@use 'variables.scss';
+@use "variables.scss";
 
 @mixin heading {
 	font: {
@@ -19,7 +19,6 @@
 
 	line-height: 20px;
 }
-
 
 
 @mixin text {
@@ -49,7 +48,7 @@
 	outline-color: var(--back);
 
 	&:is(:hover, :focus-visible) {
-		--back: hsl(203deg 42% 58%)
+		--back: hsl(203deg 42% 58%);
 	}
 
 	&:active {

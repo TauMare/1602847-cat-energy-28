@@ -17,8 +17,8 @@
 	align-items: center;
 
 	&:is(:hover, :focus-visible) {
-		color: #FFFFFF;
-		background-color: #5EAA2F;
+		color: #ffffff;
+		background-color: #5eaa2f;
 	}
 
 	&:active {
@@ -32,7 +32,7 @@
 
 		&:is(:hover, :focus-visible) {
 			color: $light-black;
-			background-color: #EBEBEB;
+			background-color: #ebebeb;
 		}
 
 		&:active {

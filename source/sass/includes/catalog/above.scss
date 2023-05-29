@@ -1,8 +1,8 @@
 @use "./variables.scss" as *;
 
 .above-container {
-	border-top: 1px solid #EBEBEB;
-	border-bottom: 1px solid #EBEBEB;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
 	padding-block: 25px;
 	padding-inline: var(--side-offset);
 	display: flex;
@@ -39,7 +39,7 @@
 	.above-container {
 		margin-top: 80px;
 		height: auto;
-		border: 2px solid #F2F2F2;
+		border: 2px solid #f2f2f2;
 		padding-block: 50px 38px;
 		padding-inline: 38px;
 	}
@@ -69,13 +69,13 @@
 	}
 }
 
-@media (width >=$desktop-width) {
+@media (width >= $desktop-width) {
 	.above-container__title {
 		margin-top: 51px;
 		width: 82%;
 	}
-	
+
 	.above-container__subtitle {
-		width: 100%
+		width: 100%;
 	}
 }

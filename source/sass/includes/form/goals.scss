@@ -9,18 +9,19 @@
 	padding: 0;
 	padding-block: 22px 19px;
 	padding-inline: var(--side-offset);
-	border-bottom: 1px solid #D9D9D9;
-};
+	border-bottom: 1px solid #d9d9d9;
+}
 
 .goals__label {
 	font-size: 16px;
 	line-height: 18px;
 	text-transform: uppercase;
 
-	.goals__input:disabled ~ &, .goals__input--disabled ~ &{
+	.goals__input:disabled ~ &,
+	.goals__input--disabled ~ & {
 		opacity: 0.3;
 	}
-};
+}
 
 .goals__choose {
 	display: flex;
@@ -28,7 +29,7 @@
 	gap: 15px;
 
 	&:hover .goals__radio {
-		border: 1px solid #BABABA;
+		border: 1px solid #bababa;
 	}
 }
 
@@ -36,11 +37,11 @@
 	display: block;
 	width: 30px;
 	height: 30px;
-	border: 1px solid #CDCDCD;
+	border: 1px solid #cdcdcd;
 	border-radius: 50%;
 	position: relative;
 
-	.goals__input:checked + &{
+	.goals__input:checked + & {
 		&::before {
 			content: "";
 			position: absolute;
@@ -57,11 +58,13 @@
 		border-color: $accent;
 	}
 
-	.goals__input:disabled + &, .goals__input--disabled + &{
+	.goals__input:disabled + &,
+	.goals__input--disabled + & {
 		opacity: 0.3;
 	}
 
-	.goals__input:disabled:checked + &, .goals__input--disabled:checked + &{
+	.goals__input:disabled:checked + &,
+	.goals__input--disabled:checked + & {
 		opacity: 0.3;
 
 		&::before {
@@ -81,7 +84,7 @@
 	.goals {
 		margin-top: 48px;
 		margin-inline: 71px 67px;
-		border: 1px solid #E7E7E7;
+		border: 1px solid #e7e7e7;
 		padding: 24px 27px;
 	}
 
@@ -89,7 +92,7 @@
 		width: 40px;
 		height: 40px;
 
-		.goals__input:checked + &{
+		.goals__input:checked + & {
 			&::before {
 				top: calc(50% - 9px);
 				left: calc(50% - 9px);
@@ -98,7 +101,8 @@
 			}
 		}
 
-		.goals__input:disabled:checked + &, .goals__input--disabled:checked + &{
+		.goals__input:disabled:checked + &,
+		.goals__input--disabled:checked + & {
 			&::before {
 				top: calc(50% - 9px);
 				left: calc(50% - 9px);
