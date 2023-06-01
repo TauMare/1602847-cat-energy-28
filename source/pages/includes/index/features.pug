@@ -1,9 +1,0 @@
-section.features
-	h2._title Как это работает
-	ol._list
-		each feature in features
-			li._feature
-				span._icon-wrapper
-					svg(class=`features__icon` width=25 height=30 aria-hidden="true" fill="currentColor")
-						use(href=`img/features.svg#${feature.icon}`)
-				p._text=feature.text

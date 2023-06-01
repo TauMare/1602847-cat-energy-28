@@ -1,7 +1,0 @@
-div(role="group" aria-labelledby="contacts-title").line-section.-form.contacts
-	h2#contacts-title._title.page__subtitle.contacts__title Контактные данные<br> (владельца кота)
-	.contacts__container
-		each input in contacts
-			label.input.contacts__label=input.label
-				input._field.-icon.contacts__input(type=`${input.type}` name=`${input.type}` placeholder=`${input.placeholder}` required=input.required)
-				span._icon

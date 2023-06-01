@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подбор программы | Кэт энерджи</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/main.js" defer></script>
+    <link rel="preload" href="fonts/lato-regular.woff2" as="font">
+    <link rel="preload" href="fonts/oswald-400.woff2" as="font">
+    <link rel="preload" href="fonts/oswald-500.woff2" as="font">
+  </head>
+  <body class="page__body">
+    <header class="header"><a class="logo header__logo" href="index.html" tabindex="-1">
+        <svg class="logo__mascot" role="img" aria-labelledby="mascot-title" width="34" height="38">
+          <title id="mascot-title">Наш маскот.</title>
+          <use class="logo__icon logo__icon--small" href="img/logotype.svg#small"></use>
+          <use class="logo__icon logo__icon--medium" href="img/logotype.svg#medium"></use>
+          <use class="logo__icon logo__icon--full" href="img/logotype.svg#full"></use>
+        </svg>
+        <svg class="logo__type" role="img" aria-labelledby="logotype-title" width="102" height="19" fill="currentColor">
+          <title id="logotype-title">Кэт энерджи</title>
+          <use href="img/logotype.svg#type"></use>
+        </svg></a>
+      <nav class="header__nav">
+        <button class="burger header__toggle" hidden aria-label="Открыть меню" title="Открыть меню" aria-expanded="false">
+          <svg width="65" height="65" viewBox="0 0 65 65" fill="none" stroke="currentColor" stroke-width="1.5" role="img">
+            <line class="burger__line burger__line--top" x1="20" x2="44" y1="23.25" y2="23.25"></line>
+            <line class="burger__line burger__line--middle" x1="20" x2="44" y1="31.25" y2="31.25"></line>
+            <line class="burger__line burger__line--bottom" x1="20" x2="44" y1="39.25" y2="39.25"></line>
+          </svg>
+        </button>
+        <ul class="header__list page__no-list" id="navigation">
+          <li><a class="header__link" href="index.html">Главная</a></li>
+          <li><a class="header__link" href="catalog.html">Каталог продукции</a></li>
+          <li><a class="header__link" href="form.html" aria-current="page">Подбор программы</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page__main">
+      <section class="form-section">
+        <h1 class="form-section__title page__title">Подбор программы</h1>
+        <p class="form-section__subtitle">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
+        <form class="form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <div class="form__section-wrapper">
+            <fieldset class="personal">
+              <legend class="page__hidden">Введите данные о Вашем котике.</legend>
+              <label class="personal__input input">Имя:*
+                <input class="personal__field input__field" type="text" name="name" placeholder="Барсик." value="Барсик" required>
+              </label>
+              <label class="personal__input input">Вес (кг):*
+                <input class="personal__field input__field" type="number" name="weight" placeholder="Вес числом." value="7" required>
+              </label>
+              <label class="personal__input input">Возраст (лет):
+                <input class="personal__field input__field" type="number" name="age" placeholder="7" value="7" required>
+              </label>
+            </fieldset>
+            <fieldset class="goals">
+              <legend class="page__hidden">Выберите цель для Вашего котика.</legend>
+              <label class="goals__choose">
+                <input class="goals__input page__hidden" type="radio" name="goal" id="loss" value="loss" checked><span class="goals__radio"></span><span class="goals__label">Похудение</span>
+              </label>
+              <label class="goals__choose">
+                <input class="goals__input page__hidden" type="radio" name="goal" id="gain" value="gain"><span class="goals__radio"></span><span class="goals__label">Набор массы</span>
+              </label>
+              <label class="goals__choose">
+                <input class="goals__input page__hidden" type="radio" name="goal" id="none" value="none"><span class="goals__radio"></span><span class="goals__label">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </fieldset>
+          </div>
+          <div class="line-section line-section--form contacts" role="group" aria-labelledby="contacts-title">
+            <h2 class="line-section__title page__subtitle contacts__title" id="contacts-title">Контактные данные<br> (владельца кота)</h2>
+            <div class="contacts__container">
+              <label class="input contacts__label">E-mail:*
+                <input class="input__field input__field--icon contacts__input" type="email" name="email" placeholder="кuklachev@gmail.com" required><span class="input__icon"></span>
+              </label>
+              <label class="input contacts__label">Телефон:*
+                <input class="input__field input__field--icon contacts__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" required><span class="input__icon"></span>
+              </label>
+            </div>
+          </div>
+          <div class="line-section line-section--form extra" role="group" aria-labelledby="extra-title">
+            <h2 class="line-section__title page__subtitle extra__title" id="extra-title">Комментарий</h2>
+            <textarea class="extra__input input" name="comment" placeholder="Расскажите обо всех повадках кота" cols="30" rows="7" aria-labelledby="extra-title"></textarea>
+          </div>
+          <div class="line-section line-section--form additional" role="group" aria-labelledby="additional-title">
+            <h2 class="line-section__title page__subtitle additional__title" id="additional-title">Дополнительно</h2>
+            <div class="additional__container">
+              <label class="checkbox">
+                <input class="checkbox__native page__hidden" type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked><span class="checkbox__custom">
+                  <svg class="checkbox__tick" width="30" height="20" aria-hidden="true" fill="currentColor">
+                    <use href="img/form.svg#tick"></use>
+                  </svg></span><span class="checkbox__label">сахарозаменитель</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__native page__hidden" type="checkbox" name="milk" id="milk" value="milk"><span class="checkbox__custom">
+                  <svg class="checkbox__tick" width="30" height="20" aria-hidden="true" fill="currentColor">
+                    <use href="img/form.svg#tick"></use>
+                  </svg></span><span class="checkbox__label">питьевая вода</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__native page__hidden" type="checkbox" name="water" id="water" value="water"><span class="checkbox__custom">
+                  <svg class="checkbox__tick" width="30" height="20" aria-hidden="true" fill="currentColor">
+                    <use href="img/form.svg#tick"></use>
+                  </svg></span><span class="checkbox__label">молоко</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__native page__hidden" type="checkbox" name="vitamins" id="vitamins" value="vitamins"><span class="checkbox__custom">
+                  <svg class="checkbox__tick" width="30" height="20" aria-hidden="true" fill="currentColor">
+                    <use href="img/form.svg#tick"></use>
+                  </svg></span><span class="checkbox__label">витамины</span>
+              </label>
+            </div>
+          </div>
+          <div class="form__footer">
+            <button class="form__button button" type="submit">отправить заявку</button>
+            <p class="form__required">* — Обязательные поля</p>
+          </div>
+        </form>
+      </section>
+      <div class="address address--secondary">
+        <address class="address__wrapper"><strong class="address__title">Приглашаем  <br>к сотрудничеству дилеров!</strong><a class="address__link" href="geo:59.938731,30.323062">ул. Большая<br>Конюшенная, д. 19/8<br><span class="address__city">Санкт-Петербург</span></a></address>
+        <iframe class="address__map" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682254154821!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" hidden></iframe>
+        <noscript>
+          <picture class="address__map">
+            <source srcset="img/address/location-desk.avif 1x, img/address/location-desk@2x.avif 2x, img/address/location-desk@3x.avif 3x" media="(min-width: 1280px)" type="image/avif" width="1440" height="400"/>
+            <source srcset="img/address/location-desk.webp 1x, img/address/location-desk@2x.webp 2x, img/address/location-desk@3x.webp 3x" media="(min-width: 1280px)" type="image/webp" width="1440" height="400"/>
+            <source srcset="img/address/location-desk.png 1x, img/address/location-desk@2x.png 2x, img/address/location-desk@3x.png 3x" media="(min-width: 1280px)" type="image/png" width="1440" height="400"/>
+            <source srcset="img/address/location-tab.avif 1x, img/address/location-tab@2x.avif 2x, img/address/location-tab@3x.avif 3x" media="(min-width: 700px)" type="image/avif" width="768" height="400"/>
+            <source srcset="img/address/location-tab.webp 1x, img/address/location-tab@2x.webp 2x, img/address/location-tab@3x.webp 3x" media="(min-width: 700px)" type="image/webp" width="768" height="400"/>
+            <source srcset="img/address/location-tab.png 1x, img/address/location-tab@2x.png 2x, img/address/location-tab@3x.png 3x" media="(min-width: 700px)" type="image/png" width="768" height="400"/>
+            <source srcset="img/address/location.avif 1x, img/address/location@2x.avif 2x, img/address/location@3x.avif 3x" type="image/avif"/>
+            <source srcset="img/address/location.webp 1x, img/address/location@2x.webp 2x, img/address/location@3x.webp 3x" type="image/webp"/><img src="img/address/location.png" srcset="img/address/location@2x.png 2x, img/address/location@3x.png 3x" alt="Мы на карте." loading="lazy" width="320" height="362"/>
+          </picture>
+        </noscript>
+      </div>
+    </main>
+    <footer class="footer">
+      <svg class="footer__logo" role="img" aria-labelledby="footer-logo" width="128" height="24" fill="currentColor">
+        <title id="footer-logo">Кэт энерджи</title>
+        <use href="img/logotype.svg#type"></use>
+      </svg>
+      <ul class="footer__socials page__no-list" aria-label="Наши социальные сети">
+        <li><a class="footer__social" href="https://vk.com/htmlacademy" title="Мы ВКонтанте" aria-label="Мы ВКонтанте">
+            <svg width="28" height="22" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#vk"></use>
+            </svg></a></li>
+        <li><a class="footer__social" href="https://www.youtube.com/user/htmlacademyru" title="Наш Ютуб канал" aria-label="Наш Ютуб канал">
+            <svg width="28" height="22" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#youtube"></use>
+            </svg></a></li>
+        <li><a class="footer__social" href="https://t.me/htmlacademy" title="Наш Телеграм" aria-label="Наш Телеграм">
+            <svg width="28" height="22" aria-hidden="true" fill="currentColor">
+              <use href="img/stack.svg#telegram"></use>
+            </svg></a></li>
+      </ul><a class="footer__copy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+        <svg class="footer__copy-logo" width="28" height="34" aria-hidden="true" fill="currentColor">
+          <use href="img/stack.svg#academy"></use>
+        </svg></a>
+    </footer>
+  </body>
+</html>

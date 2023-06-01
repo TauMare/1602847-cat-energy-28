@@ -1,9 +1,0 @@
-- label: E-mail:*
-  type: email
-  placeholder: кuklachev@gmail.com
-  required: true
-
-- label: Телефон:*
-  type: tel
-  placeholder: 8 (960) 900-60-90
-  required: true
